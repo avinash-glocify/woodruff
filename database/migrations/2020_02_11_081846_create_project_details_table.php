@@ -30,6 +30,10 @@ class CreateProjectDetailsTable extends Migration
             $table->float('change_bounce_rate')->nullable();
             $table->float('avg_time_on_page')->nullable();
             $table->float('change_avg_time_on_page')->nullable();
+            $table->integer('impressions')->nullable();
+            $table->float('clicks')->nullable();
+            $table->float('ctr')->nullable();
+            $table->float('average_position')->nullable();
             $table->timestamps();
         });
     }

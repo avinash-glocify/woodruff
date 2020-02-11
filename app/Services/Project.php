@@ -23,6 +23,10 @@ class Project
           'change_bounce_rate'                    => $row['change_bounce_rate'] ?? ( $existDetail ? $existDetail->change_bounce_rate : null ),
           'avg_time_on_page'                      => $row['avg_time_on_page'] ?? ( $existDetail ? $existDetail->avg_time_on_page : null ),
           'change_avg_time_on_page'               => $row['change_avg_time_on_page'] ?? ( $existDetail ? $existDetail->change_avg_time_on_page : null ),
+          'impressions'                           => $row['impressions'] ?? ( $existDetail ? $existDetail->impressions : null ),
+          'clicks'                                => $row['clicks'] ?? ( $existDetail ? $existDetail->clicks : null ),
+          'ctr'                                   => $row['ctr'] ?? ( $existDetail ? $existDetail->ctr : null ),
+          'average_position'                      => $row['average_position'] ?? ( $existDetail ? $existDetail->average_position : null ),
         ];
         return $data;
     }

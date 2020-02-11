@@ -2,4 +2,6 @@
 <div class="row">
     @include('projects.imports.sitemap')
     @include('projects.imports.google_analytics')
+    @include('projects.imports.google_search_console')
+    @include('projects.imports.search_filter')
 </div>

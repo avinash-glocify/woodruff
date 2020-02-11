@@ -18,5 +18,7 @@ Route::group(['middleware' => 'auth'], function() {
   Route::resource('project', 'ProjectController');
   Route::post('project/sitemap/{id}', 'ProjectDetailController@storeSitemap')->name('project.sitemap');
   Route::post('project/analytics/{id}', 'ProjectDetailController@storeAnalytics')->name('project.analytics');
+  Route::post('project/console/{id}', 'ProjectDetailController@storeConsole')->name('project.console');
+  Route::post('project/search-filter/{id}', 'ProjectDetailController@storeSearchFilter')->name('project.search-filter');
   Route::get('sample/{type}', 'ProjectController@downloadSample')->name('project.sample');
 });
