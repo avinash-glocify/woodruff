@@ -16,6 +16,7 @@ class CreateProjectDetailsTable extends Migration
         Schema::create('project_details', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('url');
+            $table->integer('project_id');
             $table->string('sitemap')->nullable();
             $table->string('landing_page_path')->nullable();
             $table->bigInteger('sessions')->nullable();

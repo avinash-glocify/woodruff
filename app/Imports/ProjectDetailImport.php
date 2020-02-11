@@ -25,9 +25,10 @@ class ProjectDetailImport implements ToCollection, WithHeadingRow
     {
         foreach ($rows as $key => $row) {
             if(isset($row['url'])) {
-              $projectDetail = ProjectDetail::where('url', $row['url'])->first();
-              $data          = ProjectService::getMetaData($row, $existDetail ?? false);
-              $projectDetail = ProjectDetail::updateOrCreate(['url' => $row['url']],$data);
+              $projectDetail      = ProjectDetail::where(['url' => $row['url'], 'project_id' => $this->project->id ])->first();
+              $data               = ProjectService::getMetaData($row, $existDetail ?? false);
+              $data['project_id'] = $this->project->id;
+              $projectDetail      = ProjectDetail::updateOrCreate(['url' => $row['url']],$data);
             }
         }
     }
