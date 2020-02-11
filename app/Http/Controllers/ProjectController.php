@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Validator;
+
+use App\Models\Project;
 use Auth;
 
 class ProjectController extends Controller
@@ -49,5 +52,12 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         //
+    }
+
+    public function downloadSample($type)
+    {
+        $file    = public_path(). "/sampleFiles/".$type.".csv";
+        $headers = array('Content-Type: application/csv');
+        return Response::download($file, $type.'.csv', $headers);
     }
 }
