@@ -16,7 +16,7 @@ class CreateProjectDetailsTable extends Migration
         Schema::create('project_details', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('url');
-            $table->string('sitemap');
+            $table->string('sitemap')->nullable();
             $table->string('landing_page_path')->nullable();
             $table->bigInteger('sessions')->nullable();
             $table->float('change_sessions')->nullable();
@@ -34,6 +34,19 @@ class CreateProjectDetailsTable extends Migration
             $table->float('clicks')->nullable();
             $table->float('ctr')->nullable();
             $table->float('average_position')->nullable();
+            $table->string('keyword')->nullable();
+            $table->integer('position')->nullable();
+            $table->integer('previous_position')->nullable();
+            $table->integer('search_volume')->nullable();
+            $table->float('keyword_difficulty')->nullable();
+            $table->float('cpc')->nullable();
+            $table->float('traffic')->nullable();
+            $table->float('traffic_cost')->nullable();
+            $table->float('competition')->nullable();
+            $table->bigInteger('number_of_results')->nullable();
+            $table->text('trends')->nullable();
+            $table->string('timestamp')->nullable();
+            $table->string('serp_features_by_keyword')->nullable();
             $table->timestamps();
         });
     }

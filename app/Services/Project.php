@@ -27,6 +27,19 @@ class Project
           'clicks'                                => $row['clicks'] ?? ( $existDetail ? $existDetail->clicks : null ),
           'ctr'                                   => $row['ctr'] ?? ( $existDetail ? $existDetail->ctr : null ),
           'average_position'                      => $row['average_position'] ?? ( $existDetail ? $existDetail->average_position : null ),
+          'keyword'                               => $row['keyword'] ?? ( $existDetail ? $existDetail->keyword : null ),
+          'position'                              => $row['position'] ?? ( $existDetail ? $existDetail->position : null ),
+          'previous_position'                     => $row['previous_position'] ?? ( $existDetail ? $existDetail->previous_position : null ),
+          'search_volume'                         => $row['search_volume'] ?? ( $existDetail ? $existDetail->search_volume : null ),
+          'keyword_difficulty'                    => $row['keyword_difficulty'] ?? ( $existDetail ? $existDetail->keyword_difficulty : null ),
+          'cpc'                                   => $row['cpc'] ?? ( $existDetail ? $existDetail->cpc : null ),
+          'traffic'                               => $row['traffic'] ?? ( $existDetail ? $existDetail->traffic : null ),
+          'traffic_cost'                          => $row['traffic_cost'] ?? ( $existDetail ? $existDetail->traffic_cost : null ),
+          'competition'                           => $row['competition'] ?? ( $existDetail ? $existDetail->competition : null ),
+          'number_of_results'                     => $row['number_of_results'] ?? ( $existDetail ? $existDetail->number_of_results : null ),
+          'trends'                                => $row['trends'] ?? ( $existDetail ? $existDetail->trends : null ),
+          'timestamp'                             => $row['timestamp'] ?? ( $existDetail ? $existDetail->timestamp : null ),
+          'serp_features_by_keyword'              => $row['serp_features_by_keyword'] ?? ( $existDetail ? $existDetail->serp_features_by_keyword : null ),
         ];
         return $data;
     }

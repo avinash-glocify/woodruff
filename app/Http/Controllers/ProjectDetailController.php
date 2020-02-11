@@ -59,4 +59,16 @@ class ProjectDetailController extends Controller
         Excel::import($import,  request()->file('filter_file'));
         return redirect()->back()->with(['success' => 'Search Filter File Imported SuccessFully' ]);
     }
+
+    public function storeCsv(Request $request, $id)
+    {
+        $rules   = ['csv_file' => 'required'];
+        $request->validate($rules);
+
+        $project = Project::findOrFail($id);
+        $import  = new ProjectDetailImport($project);
+
+        Excel::import($import,  request()->file('csv_file'));
+        return redirect()->back()->with(['success' => 'Csv File Imported SuccessFully' ]);
+    }
 }
