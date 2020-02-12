@@ -5,7 +5,7 @@
         <div class="card-header bg-gradient-light">
           <h5 class="text-center">Google Analytics</h5>
         </div>
-          <a href="{{route('project.sample', ['google-analytics'])}}" class=" m-2 float-right">Download Sample</a>
+          <a href="{{route('project.sample', ['google-analytics'])}}" class=" m-2 float-right text-monospace">Download Sample</a>
       </div>
       <form class="forms-sample d-inline-block" method="post" action="{{ route('project.analytics', [$project->id]) }}" enctype="multipart/form-data">
         @csrf

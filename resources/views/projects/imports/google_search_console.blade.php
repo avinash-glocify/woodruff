@@ -5,7 +5,7 @@
         <div class="card-header bg-gradient-light">
           <h5 class="text-center">Google Search Console</h5>
         </div>
-          <a href="{{route('project.sample', ['google-search-console'])}}" class="m-2 float-right">Download Sample</a>
+          <a href="{{route('project.sample', ['google-search-console'])}}" class="m-2 float-right text-monospace">Download Sample</a>
       </div>
       <form class="forms-sample d-inline-block" method="post" action="{{ route('project.console', [$project->id]) }}" enctype="multipart/form-data">
         @csrf
