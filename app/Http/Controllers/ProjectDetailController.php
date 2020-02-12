@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Imports\ProjectDetailImport;
 use App\Imports\SitemapImport;
+use App\Imports\csvImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Project;
@@ -67,7 +68,7 @@ class ProjectDetailController extends Controller
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new ProjectDetailImport($project, 'csv');
+        $import  = new csvImport($project);
 
         Excel::import($import,  request()->file('csv_file'));
         return redirect()->back()->with(['success' => 'Csv File Imported SuccessFully' ]);
