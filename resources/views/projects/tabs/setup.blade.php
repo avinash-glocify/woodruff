@@ -6,4 +6,5 @@
     @include('projects.imports.google_search_console_filter')
     @include('projects.imports.google_anaytics_search_filter')
     @include('projects.imports.csv_import')
+    @include('projects.imports.best_keyword')
 </div>

@@ -11,6 +11,7 @@ use App\Imports\GoogleAnalyitcsImport;
 use App\Imports\SearchConsoleImport;
 use App\Imports\GoogleAnalyticsFilterImport;
 use App\Imports\GoogleConsoleFilterImport;
+use App\Imports\BestKeywordsImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Project;
@@ -88,5 +89,17 @@ class ProjectDetailController extends Controller
 
         Excel::import($import,  request()->file('analtyics_filter_file'));
         return redirect()->back()->with(['success' => 'Google Analytics Filter File Imported SuccessFully' ]);
+    }
+
+    public function storeBestKeyword(Request $request, $id)
+    {
+        $rules   = ['best_keyword_file' => 'required'];
+        $request->validate($rules);
+
+        $project = Project::findOrFail($id);
+        $import  = new BestKeywordsImport($project);
+
+        Excel::import($import,  request()->file('best_keyword_file'));
+        return redirect()->back()->with(['success' => 'Best Keywords File Imported SuccessFully' ]);
     }
 }

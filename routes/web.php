@@ -22,5 +22,6 @@ Route::group(['middleware' => 'auth'], function() {
   Route::post('project/search-filter/{id}', 'ProjectDetailController@storeSearchFilter')->name('project.search-filter');
   Route::post('project/csv/{id}', 'ProjectDetailController@storeCsv')->name('project.csv');
   Route::post('project/analtyics-search-filter/{id}', 'ProjectDetailController@storeAnalyticsFilter')->name('project.analtyics-search-filter');
+  Route::post('project/best-keywords/{id}', 'ProjectDetailController@storeBestKeyword')->name('project.best-keywords');
   Route::get('sample/{type}', 'ProjectController@downloadSample')->name('project.sample');
 });
