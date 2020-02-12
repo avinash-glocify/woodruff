@@ -18,7 +18,7 @@ class ProjectDetailController extends Controller
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new ProjectDetailImport($project);
+        $import  = new ProjectDetailImport($project, 'sitemap');
 
         Excel::import($import,  request()->file('sitemap_file'));
         return redirect()->back()->with(['success' => 'Sitemap Imported SuccessFully' ]);
@@ -30,7 +30,7 @@ class ProjectDetailController extends Controller
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new ProjectDetailImport($project);
+        $import  = new ProjectDetailImport($project, 'analytics');
 
         Excel::import($import,  request()->file('analytics_file'));
         return redirect()->back()->with(['success' => 'Google Analytics File Imported SuccessFully' ]);
@@ -42,7 +42,7 @@ class ProjectDetailController extends Controller
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new ProjectDetailImport($project);
+        $import  = new ProjectDetailImport($project, 'console');
 
         Excel::import($import,  request()->file('console_file'));
         return redirect()->back()->with(['success' => 'Google Console File Imported SuccessFully' ]);
@@ -54,7 +54,7 @@ class ProjectDetailController extends Controller
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new ProjectDetailImport($project);
+        $import  = new ProjectDetailImport($project, 'searchFilter');
 
         Excel::import($import,  request()->file('filter_file'));
         return redirect()->back()->with(['success' => 'Search Filter File Imported SuccessFully' ]);
@@ -66,7 +66,7 @@ class ProjectDetailController extends Controller
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new ProjectDetailImport($project);
+        $import  = new ProjectDetailImport($project, 'csv');
 
         Excel::import($import,  request()->file('csv_file'));
         return redirect()->back()->with(['success' => 'Csv File Imported SuccessFully' ]);
