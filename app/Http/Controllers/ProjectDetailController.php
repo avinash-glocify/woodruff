@@ -113,6 +113,6 @@ class ProjectDetailController extends Controller
         $import  = new MainKeywordsImport($project);
 
         Excel::import($import,  request()->file('main_keyword_file'));
-        return redirect()->back()->with(['success' => 'Best Keywords File Imported SuccessFully' ]);
+        return redirect()->back()->with(['success' => 'Main Keywords File Imported SuccessFully' ]);
     }
 }
