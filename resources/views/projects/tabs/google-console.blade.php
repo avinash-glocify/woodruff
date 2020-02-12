@@ -4,8 +4,8 @@
       <div class="card-header">Google Search Console</div>
       <div class="card-body">
           <div class="table-responsive">
-              <table class="table table-bordered">
-                  <thead>
+              <table class="table table-striped">
+                  <thead class="btn-inverse-dark">
                     <tr>
                         <th>#</th>
                         <th>Landing Page Path</th>
@@ -49,6 +49,8 @@
                   </tbody>
               </table>
         </div>
+      </div>
+      <div class="card-footer">
         <div class="float-right">
           {{ $analytics->links() }}
         </div>

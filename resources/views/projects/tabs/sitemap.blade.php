@@ -4,8 +4,8 @@
       <div class="card-header">SiteMaps</div>
       <div class="card-body">
           <div class="table-responsive">
-              <table class="table table-bordered">
-                  <thead>
+              <table class="table table-striped">
+                  <thead class="btn-inverse-dark">
                     <tr>
                         <th>#</th>
                         <th>Name</th>
@@ -27,6 +27,8 @@
                   </tbody>
               </table>
         </div>
+      </div>
+      <div class="card-footer">
         <div class="float-right">
           {{ $sitemaps->links() }}
         </div>

@@ -4,8 +4,8 @@
       <div class="card-header">Csv</div>
       <div class="card-body">
           <div class="table-responsive">
-              <table class="table table-bordered">
-                  <thead>
+              <table class="table table-striped">
+                  <thead class="btn-inverse-dark">
                     <tr>
                         <th>#</th>
                         <th>Keyword</th>
@@ -51,6 +51,8 @@
                   </tbody>
               </table>
         </div>
+      </div>
+      <div class="card-footer">
         <div class="float-right">
           {{ $csvs->links() }}
         </div>
