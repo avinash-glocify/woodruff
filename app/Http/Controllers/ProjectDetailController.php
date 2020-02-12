@@ -12,6 +12,7 @@ use App\Imports\SearchConsoleImport;
 use App\Imports\GoogleAnalyticsFilterImport;
 use App\Imports\GoogleConsoleFilterImport;
 use App\Imports\BestKeywordsImport;
+use App\Imports\MainKeywordsImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Project;
@@ -100,6 +101,18 @@ class ProjectDetailController extends Controller
         $import  = new BestKeywordsImport($project);
 
         Excel::import($import,  request()->file('best_keyword_file'));
+        return redirect()->back()->with(['success' => 'Best Keywords File Imported SuccessFully' ]);
+    }
+
+    public function storeMainKeyword(Request $request, $id)
+    {
+        $rules   = ['main_keyword_file' => 'required'];
+        $request->validate($rules);
+
+        $project = Project::findOrFail($id);
+        $import  = new MainKeywordsImport($project);
+
+        Excel::import($import,  request()->file('main_keyword_file'));
         return redirect()->back()->with(['success' => 'Best Keywords File Imported SuccessFully' ]);
     }
 }

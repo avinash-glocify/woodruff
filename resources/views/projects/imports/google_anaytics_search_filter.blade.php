@@ -1,4 +1,4 @@
-<div class="col-md-5 offset-1 grid-margin stretch-card">
+<div class="col-md-5  grid-margin stretch-card">
   <div class="card">
     <div class="card-body">
       <div class="">
