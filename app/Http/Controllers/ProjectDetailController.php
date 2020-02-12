@@ -10,6 +10,7 @@ use App\Imports\csvImport;
 use App\Imports\GoogleAnalyitcsImport;
 use App\Imports\SearchConsoleImport;
 use App\Imports\GoogleAnalyticsFilterImport;
+use App\Imports\GoogleConsoleFilterImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Project;
@@ -55,14 +56,14 @@ class ProjectDetailController extends Controller
 
     public function storeSearchFilter(Request $request, $id)
     {
-        $rules   = ['filter_file' => 'required'];
+        $rules   = ['console_filter_file' => 'required'];
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new ProjectDetailImport($project, 'searchFilter');
+        $import  = new GoogleConsoleFilterImport($project);
 
-        Excel::import($import,  request()->file('filter_file'));
-        return redirect()->back()->with(['success' => 'Search Filter File Imported SuccessFully' ]);
+        Excel::import($import,  request()->file('console_filter_file'));
+        return redirect()->back()->with(['success' => 'Googlr Search Console Filter File Imported SuccessFully' ]);
     }
 
     public function storeCsv(Request $request, $id)
