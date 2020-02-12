@@ -2,12 +2,12 @@
   <div class="card">
     <div class="card-body">
       <div class="">
-        <div class="card-header">
+        <div class="card-header bg-gradient-light">
           <h5 class="text-center">Csv Import</h5>
         </div>
-          <a href="{{route('project.sample', ['csv-import'])}}" class=" mb-3 float-right">Download Sample</a>
+          <a href="{{route('project.sample', ['csv-import'])}}" class=" m-2 float-right">Download Sample</a>
       </div>
-      <form class="forms-sample" method="post" action="{{ route('project.csv', [$project->id]) }}" enctype="multipart/form-data">
+      <form class="forms-sample d-inline-block" method="post" action="{{ route('project.csv', [$project->id]) }}" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
           <label for="exampleInputUsername1">Select File</label>
