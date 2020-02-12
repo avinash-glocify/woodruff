@@ -9,6 +9,7 @@ use App\Imports\SitemapImport;
 use App\Imports\csvImport;
 use App\Imports\GoogleAnalyitcsImport;
 use App\Imports\SearchConsoleImport;
+use App\Imports\GoogleAnalyticsFilterImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Project;
@@ -74,5 +75,17 @@ class ProjectDetailController extends Controller
 
         Excel::import($import,  request()->file('csv_file'));
         return redirect()->back()->with(['success' => 'Csv File Imported SuccessFully' ]);
+    }
+
+    public function storeAnalyticsFilter(Request $request, $id)
+    {
+        $rules   = ['analtyics_filter_file' => 'required'];
+        $request->validate($rules);
+
+        $project = Project::findOrFail($id);
+        $import  = new GoogleAnalyticsFilterImport($project);
+
+        Excel::import($import,  request()->file('analtyics_filter_file'));
+        return redirect()->back()->with(['success' => 'Google Analytics Filter File Imported SuccessFully' ]);
     }
 }
