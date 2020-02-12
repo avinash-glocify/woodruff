@@ -24,6 +24,12 @@ class UsersTableSeeder extends Seeder
             'password' => \Hash::make('12345678'),
             'role_id'  => 1,
           ],
+          [
+            'name'     => 'Ganesh',
+            'email'    => 'ganeshCro@gmail.com',
+            'password' => \Hash::make('12345678'),
+            'role_id'  => 1,
+          ],
         ];
 
         foreach ($users as $key => $user) {
