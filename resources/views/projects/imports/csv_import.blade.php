@@ -18,7 +18,10 @@
             </span>
           @enderror
         </div>
-        <button type="submit" class="btn btn-rounded btn-success mr-2">Import</button>
+        <button type="submit" class="btn btn-success btn-sm  btn-icon-text">
+                          <i class="mdi mdi-upload btn-icon-prepend"></i>
+                          Import
+          </button>
       </form>
     </div>
   </div>
