@@ -41,8 +41,10 @@
                         <td>{{++$key}}</td>
                         <td>{{$project->name}}</td>
                         <td>
-                          <a  href="{{ route('project.show', [$project->id]) }}" type="button" class="btn btn-md btn-success btn-rounded btn-fw">View</a>
-                          <a  href="javascript:void(0);" data-url="{{ route('project.destroy', [$project->id]) }}" type="button" class="btn btn-md btn-danger btn-rounded btn-fw del-btn">Delete</a>
+                          <div class="template-demo justify-content-between flex-nowrap">
+                            <a type="button" href="{{ route('project.show', [$project->id]) }}" title="view" class="btn btn-info btn-rounded btn-icon p-2"><i class="mdi mdi-eye"></i></a>
+                            <a type="button" href="javascript:void(0);" data-url="{{ route('project.destroy', [$project->id]) }}" title="Delete" class="btn btn-danger btn-rounded btn-icon p-2 del-btn"><i class="mdi mdi-delete-forever"></i></a>
+                          </div>
                         </td>
                       </tr>
                       @empty
