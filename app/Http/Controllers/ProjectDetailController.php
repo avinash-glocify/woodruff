@@ -8,6 +8,7 @@ use App\Imports\ProjectDetailImport;
 use App\Imports\SitemapImport;
 use App\Imports\csvImport;
 use App\Imports\GoogleAnalyitcsImport;
+use App\Imports\SearchConsoleImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Project;
@@ -45,7 +46,7 @@ class ProjectDetailController extends Controller
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new ProjectDetailImport($project, 'console');
+        $import  = new SearchConsoleImport($project);
 
         Excel::import($import,  request()->file('console_file'));
         return redirect()->back()->with(['success' => 'Google Console File Imported SuccessFully' ]);
