@@ -26,7 +26,7 @@ class csvImport implements ToCollection,WithHeadingRow
     {
         foreach ($rows as $key => $row) {
             if(isset($row['Keyword'])) {
-              $projectDetail      = Csv::where(['url' => $row['Keyword'], 'project_id' => $this->project->id ])->first();
+              $projectDetail      = Csv::where(['keyword' => $row['Keyword'], 'url' => $row['URL'], 'project_id' => $this->project->id ])->first();
               $data               = $this->getMetaData($row, $existDetail ?? false);
               $projectDetail      = Csv::updateOrCreate(['keyword' => $row['Keyword'], 'url' => $data['url']],$data);
             }
