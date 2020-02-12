@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Imports\ProjectDetailImport;
 use App\Imports\SitemapImport;
 use App\Imports\csvImport;
+use App\Imports\GoogleAnalyitcsImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Project;
@@ -32,7 +33,7 @@ class ProjectDetailController extends Controller
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new ProjectDetailImport($project, 'analytics');
+        $import  = new GoogleAnalyitcsImport($project, 'analytics');
 
         Excel::import($import,  request()->file('analytics_file'));
         return redirect()->back()->with(['success' => 'Google Analytics File Imported SuccessFully' ]);
