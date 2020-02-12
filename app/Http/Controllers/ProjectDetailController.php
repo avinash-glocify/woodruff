@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Imports\ProjectDetailImport;
+use App\Imports\SitemapImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Project;
@@ -18,7 +19,7 @@ class ProjectDetailController extends Controller
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new ProjectDetailImport($project, 'sitemap');
+        $import  = new SitemapImport($project);
 
         Excel::import($import,  request()->file('sitemap_file'));
         return redirect()->back()->with(['success' => 'Sitemap Imported SuccessFully' ]);
