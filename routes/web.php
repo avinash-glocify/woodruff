@@ -25,4 +25,15 @@ Route::group(['middleware' => 'auth'], function() {
   Route::post('project/best-keywords/{id}', 'ProjectDetailController@storeBestKeyword')->name('project.best-keywords');
   Route::post('project/main-keywords/{id}', 'ProjectDetailController@storeMainKeyword')->name('project.main-keywords');
   Route::get('sample/{type}', 'ProjectController@downloadSample')->name('project.sample');
+
+  Route::get('project/{id}/sitemap', 'ProjectController@sitemap')->name('sitemap');
+  Route::get('project/{id}/setup', 'ProjectController@show')->name('setup');
+  Route::get('project/{id}/csv', 'ProjectController@csv')->name('csv');
+  Route::get('project/{id}/google-analytics', 'ProjectController@googleAnalytics')->name('google-analytics');
+  Route::get('project/{id}/analytics-search-filter', 'ProjectController@googleAnalyticsSearch')->name('analytics-search-filter');
+  Route::get('project/{id}/google-console', 'ProjectController@googleConsole')->name('google-console');
+  Route::get('project/{id}/console-search-filter', 'ProjectController@consoleSearch')->name('console-search-filter');
+  Route::get('project/{id}/best-keywords', 'ProjectController@bestKeywords')->name('best-keywords');
+  Route::get('project/{id}/main-keywords', 'ProjectController@mainKeywords')->name('main-keywords');
+
 });

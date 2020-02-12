@@ -7,6 +7,14 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
 
 use App\Models\Project;
+use App\Models\SiteMaps;
+use App\Models\Csv;
+use App\Models\GoogleAnalytics;
+use App\Models\GoogleAnalyticsFilter;
+use App\Models\GoogleSearchConsoleFilter;
+use App\Models\SearchConsole;
+use App\Models\BestKeywords;
+use App\Models\MainKeyword;
 use Auth;
 
 class ProjectController extends Controller
@@ -34,8 +42,9 @@ class ProjectController extends Controller
         return redirect()->route('project.index')->with(['success' => 'Project Created SuccessFully']);
     }
 
-    public function show(Project $project)
+    public function show($id)
     {
+        $project  = Project::findOrFail($id);
         return view('projects.view', compact('project'));
     }
 
@@ -60,5 +69,61 @@ class ProjectController extends Controller
         $file    = public_path(). "/sampleFiles/".$type.".csv";
         $headers = array('Content-Type: application/csv');
         return Response::download($file, $type.'.csv', $headers);
+    }
+
+    public function sitemap($id)
+    {
+        $project = Project::findOrFail($id);
+        $sitemaps = SiteMaps::where('project_id', $id)->paginate(15);
+        return view('projects.view', compact('sitemaps', 'project'));
+    }
+
+    public function csv($id)
+    {
+        $project = Project::findOrFail($id);
+        $csvs = Csv::where('project_id', $id)->paginate(15);
+        return view('projects.view', compact('csvs', 'project'));
+    }
+
+    public function googleAnalytics($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = GoogleAnalytics::where('project_id', $id)->paginate(15);
+        return view('projects.view', compact('analytics', 'project'));
+    }
+
+    public function googleAnalyticsSearch($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = GoogleAnalyticsFilter::where('project_id', $id)->paginate(15);
+        return view('projects.view', compact('analytics', 'project'));
+    }
+
+    public function googleConsole($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = SearchConsole::where('project_id', $id)->paginate(15);
+        return view('projects.view', compact('analytics', 'project'));
+    }
+
+    public function consoleSearch($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = GoogleSearchConsoleFilter::where('project_id', $id)->paginate(15);
+        return view('projects.view', compact('analytics', 'project'));
+    }
+
+    public function bestKeywords($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = BestKeywords::where('project_id', $id)->paginate(15);
+        return view('projects.view', compact('analytics', 'project'));
+    }
+
+    public function mainKeywords($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = MainKeyword::where('project_id', $id)->paginate(15);
+        return view('projects.view', compact('analytics', 'project'));
     }
 }
