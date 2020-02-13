@@ -9976,6 +9976,7 @@ pre code {
 .table thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #f3f3f3;
+  min-width: 150px;
 }
 
 .table tbody + tbody {
