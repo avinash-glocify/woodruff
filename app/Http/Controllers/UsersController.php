@@ -7,13 +7,13 @@ use App\User;
 use App\Models\Project;
 use App\Models\Permission;
 use App\Http\Requests\UserCreateRequest;
-
+use Auth;
 class UsersController extends Controller
 {
 
     public function index()
     {
-        $users = User::all();
+        $users = User::where('id', '!=', Auth::user()->id)->get();
         return view('users.index', compact('users'));
     }
 
