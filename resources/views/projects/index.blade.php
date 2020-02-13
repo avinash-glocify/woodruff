@@ -27,8 +27,8 @@
               </div>
             @endif
             <div class="table-responsive">
-                <table class="table table-bordered">
-                    <thead>
+                <table class="table table-bordered" id="dataTable">
+                    <thead class="btn-inverse-secondary">
                       <tr>
                           <th>#</th>
                           <th>Name</th>
@@ -36,7 +36,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      @forelse($projects as $key => $project)
+                      @foreach($projects as $key => $project)
                       <tr>
                         <td>{{++$key}}</td>
                         <td>{{$project->name}}</td>
@@ -47,16 +47,9 @@
                           </div>
                         </td>
                       </tr>
-                      @empty
-                      <tr>
-                        <td colspan="5" class="text-center"><strong>No Data Found</strong></td>
-                      </tr>
-                      @endforelse
+                      @endforeach
                     </tbody>
                 </table>
-          </div>
-          <div class="float-right">
-            {{ $projects->links() }}
           </div>
         </div>
       </div>

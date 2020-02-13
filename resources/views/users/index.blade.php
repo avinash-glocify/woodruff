@@ -28,7 +28,7 @@
             @endif
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable">
-                    <thead>
+                    <thead class="btn-inverse-secondary">
                       <tr>
                           <th>Name</th>
                           <th>Email</th>
