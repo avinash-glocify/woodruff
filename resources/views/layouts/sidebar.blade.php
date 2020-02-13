@@ -35,7 +35,7 @@
           <li class="nav-item"> <a class="nav-link" href="{{ route('project.index') }}" id="createProject">Dashboard</a></li>
           <li class="nav-item"> <a class="nav-link" href="{{ route('project.create') }}" >Add New</a></li>
           <?php foreach (\App\Models\Project::get() as $key => $project): ?>
-            <li class="nav-item"> <a class="nav-link" href="{{ route('project.show', [$project->id]) }}" >{{ $project->name }}</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ route('setup', [$project->id]) }}" >{{ $project->name }}</a></li>
           <?php endforeach; ?>
         </ul>
       </div>
