@@ -31,4 +31,16 @@ $(document).ready(function() {
     });
   });
 
+  $('#is_admin').click(function(event){
+      var val = [];
+      $("#project_permissions input[type='checkbox']").each(function(ele){
+        var attr = this.hasAttribute('disabled');
+        if (attr) {
+          this.removeAttribute('disabled');
+        } else {
+          this.setAttribute('disabled', true);
+        }
+      });
+  });
+
 });

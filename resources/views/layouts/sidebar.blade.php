@@ -25,6 +25,12 @@
       </a>
     </li>
     <li class="nav-item">
+      <a class="nav-link" href="{{ route('user.index')}}">
+        <i class="mdi mdi-account menu-icon"></i>
+        <span class="menu-title">Users</span>
+      </a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
         <i class="mdi mdi-file-document-box-outline menu-icon"></i>
         <span class="menu-title">Project</span>

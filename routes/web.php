@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
@@ -25,7 +14,7 @@ Route::group(['middleware' => 'auth'], function() {
   Route::post('project/best-keywords/{id}', 'ProjectDetailController@storeBestKeyword')->name('project.best-keywords');
   Route::post('project/main-keywords/{id}', 'ProjectDetailController@storeMainKeyword')->name('project.main-keywords');
   Route::get('sample/{type}', 'ProjectController@downloadSample')->name('project.sample');
-
+  // import routes
   Route::get('project/{id}/sitemap', 'ProjectController@sitemap')->name('sitemap');
   Route::get('project/{id}/setup', 'ProjectController@show')->name('setup');
   Route::get('project/{id}/csv', 'ProjectController@csv')->name('csv');
@@ -35,5 +24,6 @@ Route::group(['middleware' => 'auth'], function() {
   Route::get('project/{id}/console-search-filter', 'ProjectController@consoleSearch')->name('console-search-filter');
   Route::get('project/{id}/best-keywords', 'ProjectController@bestKeywords')->name('best-keywords');
   Route::get('project/{id}/main-keywords', 'ProjectController@mainKeywords')->name('main-keywords');
-
+  // users routes
+  Route::resource('user', 'UsersController');
 });
