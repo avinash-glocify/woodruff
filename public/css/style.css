@@ -18428,7 +18428,6 @@ input:focus {
 /* Typography */
 body {
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
   font-weight: initial;
   line-height: normal;
   -webkit-font-smoothing: antialiased;
@@ -20854,7 +20853,7 @@ dl li {
   border-top: 0;
   border-bottom-width: 1px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 .table thead th i {
