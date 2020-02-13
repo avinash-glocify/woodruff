@@ -7,7 +7,6 @@
               <table class="table hover" id="dataTable">
                   <thead class="btn-inverse-secondary">
                     <tr>
-                        <th>#</th>
                         <th>Page Path</th>
                         <th>Landing Page</th>
                         <th>Impressions</th>
@@ -17,9 +16,8 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @forelse($analytics as $key => $analytic)
+                    @foreach($analytics as $key => $analytic)
                     <tr>
-                      <td>{{++$key}}</td>
                       <td>{{$analytic->page_path}}</td>
                       <td>{{$analytic->landing_page}}</td>
                       <td> {{$analytic->impressions}}</td>
@@ -27,11 +25,7 @@
                       <td> {{$analytic->ctr}}</td>
                       <td> {{$analytic->average_position}}</td>
                     </tr>
-                    @empty
-                    <tr>
-                      <td colspan="7" class="text-center"><strong>No Data Found</strong></td>
-                    </tr>
-                    @endforelse
+                    @endforeach
                   </tbody>
               </table>
         </div>

@@ -7,7 +7,6 @@
               <table class="table hover" id="dataTable">
                   <thead class="btn-inverse-secondary">
                     <tr>
-                        <th>#</th>
                         <th>Keyword</th>
                         <th>Position</th>
                         <th>Previous Position</th>
@@ -25,9 +24,8 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @forelse($csvs as $key => $csv)
+                    @foreach($csvs as $key => $csv)
                     <tr>
-                      <td>{{++$key}}</td>
                       <td>{{$csv->keyword}}</td>
                       <td> {{$csv->position}}</td>
                       <td> {{$csv->previous_position}}</td>
@@ -43,11 +41,7 @@
                       <td> {{$csv->timestamp}}</td>
                       <td> {{$csv->serp_features_by_keyword}}</td>
                     </tr>
-                    @empty
-                    <tr>
-                      <td colspan="5" class="text-center"><strong>No Data Found</strong></td>
-                    </tr>
-                    @endforelse
+                    @endforeach
                   </tbody>
               </table>
         </div>

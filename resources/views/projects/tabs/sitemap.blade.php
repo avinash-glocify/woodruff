@@ -7,23 +7,17 @@
               <table class="table hover" id="dataTable">
                   <thead class="btn-inverse-secondary">
                     <tr>
-                        <th>#</th>
                         <th>Name</th>
                         <th>Url</th>
                     </tr>
                   </thead>
                   <tbody>
-                    @forelse($sitemaps as $key => $sitemap)
+                    @foreach($sitemaps as $key => $sitemap)
                     <tr>
-                      <td>{{++$key}}</td>
                       <td>{{$sitemap->name}}</td>
                       <td> {{$sitemap->url}}</td>
                     </tr>
-                    @empty
-                    <tr>
-                      <td colspan="3" class="text-center"><strong>No Data Found</strong></td>
-                    </tr>
-                    @endforelse
+                    @endforeach
                   </tbody>
               </table>
         </div>

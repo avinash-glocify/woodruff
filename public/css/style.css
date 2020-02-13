@@ -9971,7 +9971,6 @@ pre code {
   padding: 1.25rem 0.9375rem;
   vertical-align: top;
   border-top: 1px solid #f3f3f3;
-  min-width: 150px !important;
 }
 
 .table thead th {
