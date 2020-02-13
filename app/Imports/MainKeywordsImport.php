@@ -25,7 +25,7 @@ class MainKeywordsImport implements ToCollection,WithHeadingRow
             if(isset($row['url'])) {
               $projectDetail      = MainKeyword::where(['url' => $row['url'], 'keywords' => $row['keyword'], 'project_id' => $this->project->id ])->first();
               $data               = $this->getMetaData($row, $existDetail ?? false);
-              $projectDetail      = MainKeyword::updateOrCreate(['url' => $row['url'], 'keywords' => $row['keyword']],$data);
+              $projectDetail      = MainKeyword::updateOrCreate(['url' => $row['url'], 'keywords' => $row['keyword'], 'project_id' => $this->project->id],$data);
             }
         }
     }

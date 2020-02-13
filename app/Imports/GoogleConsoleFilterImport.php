@@ -27,7 +27,7 @@ class GoogleConsoleFilterImport implements ToCollection,WithHeadingRow
             if(isset($row['landing_page'])) {
               $projectDetail      = GoogleSearchConsoleFilter::where(['landing_page' => $row['landing_page'], 'project_id' => $this->project->id ])->first();
               $data               = $this->getMetaData($row, $existDetail ?? false);
-              $projectDetail      = GoogleSearchConsoleFilter::updateOrCreate(['landing_page' => $row['landing_page']],$data);
+              $projectDetail      = GoogleSearchConsoleFilter::updateOrCreate(['landing_page' => $row['landing_page'], 'project_id' => $this->project->id],$data);
             }
         }
     }

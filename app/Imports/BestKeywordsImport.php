@@ -25,7 +25,7 @@ class BestKeywordsImport implements ToCollection,WithHeadingRow
             if(isset($row['url'])) {
               $projectDetail      = BestKeywords::where(['url' => $row['url'], 'keywords' => $row['keyword'], 'project_id' => $this->project->id ])->first();
               $data               = $this->getMetaData($row, $existDetail ?? false);
-              $projectDetail      = BestKeywords::updateOrCreate(['url' => $row['url'], 'keywords' => $row['keyword']],$data);
+              $projectDetail      = BestKeywords::updateOrCreate(['url' => $row['url'], 'keywords' => $row['keyword'], 'project_id' => $this->project->id],$data);
             }
         }
     }

@@ -27,7 +27,7 @@ class SearchConsoleImport implements ToCollection,WithHeadingRow
             if(isset($row['landing_page_path'])) {
               $projectDetail      = SearchConsole::where(['landing_page_path' => $row['landing_page_path'], 'project_id' => $this->project->id ])->first();
               $data               = $this->getMetaData($row, $existDetail ?? false);
-              $projectDetail      = SearchConsole::updateOrCreate(['landing_page_path' => $row['landing_page_path']],$data);
+              $projectDetail      = SearchConsole::updateOrCreate(['landing_page_path' => $row['landing_page_path'], 'project_id' => $this->project->id],$data);
             }
         }
     }

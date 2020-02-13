@@ -27,7 +27,7 @@ class GoogleAnalyitcsImport implements ToCollection,WithHeadingRow
             if(isset($row['landing_page_path'])) {
               $projectDetail      = GoogleAnalytics::where(['landing_page_path' => $row['landing_page_path'], 'project_id' => $this->project->id ])->first();
               $data               = $this->getMetaData($row, $existDetail ?? false);
-              $projectDetail      = GoogleAnalytics::updateOrCreate(['landing_page_path' => $row['landing_page_path']],$data);
+              $projectDetail      = GoogleAnalytics::updateOrCreate(['landing_page_path' => $row['landing_page_path'], 'project_id' => $this->project->id],$data);
             }
         }
     }

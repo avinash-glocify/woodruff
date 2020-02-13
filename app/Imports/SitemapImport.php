@@ -25,7 +25,7 @@ class SitemapImport implements ToCollection,WithHeadingRow
             if(isset($row['url'])) {
               $projectDetail      = SiteMaps::where(['url' => $row['url'], 'project_id' => $this->project->id ])->first();
               $data               = $this->getMetaData($row, $existDetail ?? false);
-              $projectDetail      = SiteMaps::updateOrCreate(['url' => $row['url']],$data);
+              $projectDetail      = SiteMaps::updateOrCreate(['url' => $row['url'], 'project_id' => $this->project->id],$data);
             }
         }
     }
