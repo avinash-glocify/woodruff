@@ -1,7 +1,7 @@
 @php $user = Auth::user(); @endphp
 <div class="row">
     @include('projects.imports.sitemap')
-    @include('projects.imports.csv_import')
+    @include('projects.imports.ahrefs')
     @include('projects.imports.google_analytics')
     @include('projects.imports.google_anaytics_search_filter')
     @include('projects.imports.google_search_console')

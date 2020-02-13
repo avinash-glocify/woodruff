@@ -13,6 +13,7 @@ Route::group(['middleware' => 'auth'], function() {
   Route::post('project/analtyics-search-filter/{id}', 'ProjectDetailController@storeAnalyticsFilter')->name('project.analtyics-search-filter');
   Route::post('project/best-keywords/{id}', 'ProjectDetailController@storeBestKeyword')->name('project.best-keywords');
   Route::post('project/main-keywords/{id}', 'ProjectDetailController@storeMainKeyword')->name('project.main-keywords');
+  Route::post('project/ahrefs/{id}', 'ProjectDetailController@storeAhrefs')->name('project.Ahrefs');
   Route::get('sample/{type}', 'ProjectController@downloadSample')->name('project.sample');
   // import routes
   Route::get('project/{id}/sitemap', 'ProjectController@sitemap')->name('sitemap');

@@ -18,13 +18,14 @@ class csvImport implements ToCollection,WithHeadingRow
 
     public function __construct(Project $project)
     {
-      HeadingRowFormatter::default('none');
+      // HeadingRowFormatter::default('none');
         $this->project = $project;
     }
 
     public function collection(Collection $rows)
     {
         foreach ($rows as $key => $row) {
+          echo "<pre>"; print_r($row); die;
             if(isset($row['Keyword'])) {
               $projectDetail      = Csv::where(['keyword' => $row['Keyword'], 'url' => $row['URL'], 'project_id' => $this->project->id ])->first();
               $data               = $this->getMetaData($row, $existDetail ?? false);

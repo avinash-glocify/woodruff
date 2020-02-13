@@ -13,6 +13,7 @@ use App\Imports\GoogleAnalyticsFilterImport;
 use App\Imports\GoogleConsoleFilterImport;
 use App\Imports\BestKeywordsImport;
 use App\Imports\MainKeywordsImport;
+use App\Imports\AhrefsImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Project;
@@ -113,6 +114,18 @@ class ProjectDetailController extends Controller
         $import  = new MainKeywordsImport($project);
 
         Excel::import($import,  request()->file('main_keyword_file'));
+        return redirect()->back()->with(['success' => 'Main Keywords File Imported SuccessFully' ]);
+    }
+
+    public function storeAhrefs(Request $request, $id)
+    {
+        $rules   = ['ahrefs_file' => 'required'];
+        $request->validate($rules);
+
+        $project = Project::findOrFail($id);
+        $import  = new AhrefsImport($project);
+
+        Excel::import($import,  request()->file('ahrefs_file'));
         return redirect()->back()->with(['success' => 'Main Keywords File Imported SuccessFully' ]);
     }
 }
