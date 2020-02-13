@@ -23,20 +23,10 @@
             <div class="">
               @if($segment == 'sitemap')
                 @include('projects.tabs.sitemap')
-              @elseif($segment == 'csv')
-                @include('projects.tabs.csv')
-              @elseif($segment == 'google-analytics')
-                @include('projects.tabs.google-analytics')
-              @elseif($segment == 'analytics-search-filter')
-                @include('projects.tabs.google-analytics-filter')
-              @elseif($segment == 'google-console')
+              @elseif($segment == 'google-search-console')
                 @include('projects.tabs.google-console')
-              @elseif($segment == 'console-search-filter')
-                @include('projects.tabs.google-console-filter')
-              @elseif($segment == 'best-keywords')
-                @include('projects.tabs.best-keywords')
-              @elseif($segment == 'main-keywords')
-                @include('projects.tabs.main-keywords')
+              @elseif($segment == 'ahrefs')
+                @include('projects.tabs.ahrefs')
               @else
                 @include('projects.tabs.setup')
               @endif

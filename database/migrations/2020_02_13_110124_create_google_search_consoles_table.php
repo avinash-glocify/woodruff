@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBestKeywordsTable extends Migration
+class CreateGoogleSearchConsolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateBestKeywordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('best_keywords', function (Blueprint $table) {
+        Schema::create('google_search_consoles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('project_id');
-            $table->string('url');
-            $table->string('keywords');
-            $table->integer('search_volume');
-            $table->integer('position');
+            $table->string('page')->nullable();
+            $table->integer('impressions')->nullable();
+            $table->float('clicks')->nullable();
+            $table->string('ctr')->nullable();
+            $table->float('position')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateBestKeywordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('best_keywords');
+        Schema::dropIfExists('google_search_consoles');
     }
 }

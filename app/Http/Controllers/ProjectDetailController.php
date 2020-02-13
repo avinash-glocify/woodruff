@@ -6,13 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Imports\ProjectDetailImport;
 use App\Imports\SitemapImport;
-use App\Imports\csvImport;
-use App\Imports\GoogleAnalyitcsImport;
-use App\Imports\SearchConsoleImport;
-use App\Imports\GoogleAnalyticsFilterImport;
-use App\Imports\GoogleConsoleFilterImport;
-use App\Imports\BestKeywordsImport;
-use App\Imports\MainKeywordsImport;
+use App\Imports\GoogleSearchConsoleImport;
 use App\Imports\AhrefsImport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -51,7 +45,7 @@ class ProjectDetailController extends Controller
         $request->validate($rules);
 
         $project = Project::findOrFail($id);
-        $import  = new SearchConsoleImport($project);
+        $import  = new GoogleSearchConsoleImport($project);
 
         Excel::import($import,  request()->file('console_file'));
         return redirect()->back()->with(['success' => 'Google Console File Imported SuccessFully' ]);

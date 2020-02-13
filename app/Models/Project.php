@@ -8,64 +8,29 @@ class Project extends Model
 {
     protected $guarded = [];
 
-    public function projectDetails()
-    {
-        return $this->hasMany(\App\Models\ProjectDetail::class);
-    }
-
     public function sitemap()
     {
         return $this->hasMany(\App\Models\SiteMaps::class);
     }
 
-    public function csv()
+
+    public function googleSearchConsole()
     {
-        return $this->hasMany(\App\Models\Csv::class);
+        return $this->hasMany(\App\Models\GoogleSearchConsole::class);
     }
 
-    public function googleAnalytics()
+    public function ahrefs()
     {
-        return $this->hasMany(\App\Models\GoogleAnalytics::class);
-    }
-
-    public function googleAnalyticsFilter()
-    {
-        return $this->hasMany(\App\Models\GoogleAnalyticsFilter::class);
-    }
-
-    public function googleSearchConsoleFilter()
-    {
-        return $this->hasMany(\App\Models\GoogleSearchConsoleFilter::class);
-    }
-
-    public function searchConsoleFilter()
-    {
-        return $this->hasMany(\App\Models\SearchConsole::class);
-    }
-
-    public function mainKeyword()
-    {
-        return $this->hasMany(\App\Models\MainKeyword::class);
-    }
-
-    public function bestKeywords()
-    {
-        return $this->hasMany(\App\Models\BestKeywords::class);
+        return $this->hasMany(\App\Models\Ahref::class);
     }
 
     public static function boot() {
         parent::boot();
 
         static::deleting(function($projcet) {
-             $projcet->projectDetails()->delete();
              $projcet->sitemap()->delete();
-             $projcet->csv()->delete();
-             $projcet->googleAnalytics()->delete();
-             $projcet->googleAnalyticsFilter()->delete();
-             $projcet->googleSearchConsoleFilter()->delete();
-             $projcet->searchConsoleFilter()->delete();
-             $projcet->mainKeyword()->delete();
-             $projcet->bestKeywords()->delete();
+             $projcet->googleSearchConsole()->delete();
+             $projcet->ahrefs()->delete();
         });
     }
 }

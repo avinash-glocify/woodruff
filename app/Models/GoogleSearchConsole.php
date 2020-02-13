@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class GoogleSearchConsoleFilter extends Model
+class GoogleSearchConsole extends Model
 {
     protected $guarded = [];
 }

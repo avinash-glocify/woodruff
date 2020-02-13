@@ -8,13 +8,8 @@ use Illuminate\Support\Facades\Validator;
 
 use App\Models\Project;
 use App\Models\SiteMaps;
-use App\Models\Csv;
-use App\Models\GoogleAnalytics;
-use App\Models\GoogleAnalyticsFilter;
-use App\Models\GoogleSearchConsoleFilter;
-use App\Models\SearchConsole;
-use App\Models\BestKeywords;
-use App\Models\MainKeyword;
+use App\Models\Ahref;
+use App\Models\GoogleSearchConsole;
 use Auth;
 
 class ProjectController extends Controller
@@ -102,7 +97,7 @@ class ProjectController extends Controller
     public function googleConsole($id)
     {
         $project      = Project::findOrFail($id);
-        $analytics    = SearchConsole::where('project_id', $id)->get();
+        $analytics    = GoogleSearchConsole::where('project_id', $id)->get();
         return view('projects.view', compact('analytics', 'project'));
     }
 
@@ -124,6 +119,13 @@ class ProjectController extends Controller
     {
         $project      = Project::findOrFail($id);
         $analytics    = MainKeyword::where('project_id', $id)->get();
+        return view('projects.view', compact('analytics', 'project'));
+    }
+
+    public function aHrefs($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = Ahref::where('project_id', $id)->get();
         return view('projects.view', compact('analytics', 'project'));
     }
 }
