@@ -73,52 +73,11 @@ class ProjectController extends Controller
         return view('projects.view', compact('sitemaps', 'project'));
     }
 
-    public function csv($id)
-    {
-        $project = Project::findOrFail($id);
-        $csvs = Csv::where('project_id', $id)->get();
-        return view('projects.view', compact('csvs', 'project'));
-    }
-
-    public function googleAnalytics($id)
-    {
-        $project      = Project::findOrFail($id);
-        $analytics    = GoogleAnalytics::where('project_id', $id)->get();
-        return view('projects.view', compact('analytics', 'project'));
-    }
-
-    public function googleAnalyticsSearch($id)
-    {
-        $project      = Project::findOrFail($id);
-        $analytics    = GoogleAnalyticsFilter::where('project_id', $id)->get();
-        return view('projects.view', compact('analytics', 'project'));
-    }
 
     public function googleConsole($id)
     {
         $project      = Project::findOrFail($id);
         $analytics    = GoogleSearchConsole::where('project_id', $id)->get();
-        return view('projects.view', compact('analytics', 'project'));
-    }
-
-    public function consoleSearch($id)
-    {
-        $project      = Project::findOrFail($id);
-        $analytics    = GoogleSearchConsoleFilter::where('project_id', $id)->get();
-        return view('projects.view', compact('analytics', 'project'));
-    }
-
-    public function bestKeywords($id)
-    {
-        $project      = Project::findOrFail($id);
-        $analytics    = BestKeywords::where('project_id', $id)->get();
-        return view('projects.view', compact('analytics', 'project'));
-    }
-
-    public function mainKeywords($id)
-    {
-        $project      = Project::findOrFail($id);
-        $analytics    = MainKeyword::where('project_id', $id)->get();
         return view('projects.view', compact('analytics', 'project'));
     }
 
