@@ -20979,6 +20979,11 @@ dl li {
   font-weight: 400;
   padding: 1.1rem 0.9375rem;
 }
+#dataTable_wrapper .row:last-child {
+      margin: 10px 0px;
+      background: rgba(104, 104, 104, 0.2);
+      padding: 16px 10px;
+}
 
 .dataTables_wrapper .dataTable tbody tr:nth-child(odd) {
   background: rgba(238, 238, 238, 0.57);
