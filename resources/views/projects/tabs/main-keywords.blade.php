@@ -4,7 +4,7 @@
       <div class="card-header">Main Keywords</div>
       <div class="card-body">
           <div class="table-responsive">
-              <table class="table hover" id="dataTable">
+              <table class="table table-hover" id="dataTable">
                   <thead class="btn-inverse-secondary">
                     <tr>
                         <th>Url</th>
