@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('#dataTable').DataTable();
 
   $(document).on('click', '.del-btn', function (e) {
     e.preventDefault();
