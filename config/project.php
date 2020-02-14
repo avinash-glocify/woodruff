@@ -3,10 +3,10 @@
 return [
     'tabs' => [
       'setup'                 => 'Setup',
+      'aggregation'           => 'Aggregation',
       'sitemap'               => 'Sitemap',
       'google-search-console' => 'Google Search Console',
       'ahrefs'                => 'Ahrefs',
-      // 'aggregation'           => 'Aggregation',
       'screaming_frogs'       => 'Screaming Frog Crawl',
       'sem-rush'              => 'SEM Rush'
     ],

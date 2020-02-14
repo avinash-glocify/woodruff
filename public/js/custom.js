@@ -1,6 +1,16 @@
 $(document).ready(function() {
   $('#dataTable').DataTable();
 
+  var table = $('#dataTableAggregate').DataTable( {
+        scrollY:        "300px",
+        scrollX:        true,
+        scrollCollapse: true,
+        "ordering": false,
+        fixedColumns:   {
+            leftColumns: 3
+        }
+    } );
+
   $(document).on('click', '.del-btn', function (e) {
     e.preventDefault();
     var url = $(this).data('url');

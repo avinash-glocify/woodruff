@@ -1,102 +1,103 @@
 <div class="row">
-  <div class="col-md-12 grid-margin stretch-card">
+  <div class="col-md-12 grid-margin stretch-card aggregation">
     <div class="card">
       <div class="card-header">Aggregation</div>
       <div class="card-body">
           <div class="table-responsive">
-              <table class="table table-hover" id="dataTable">
+              <table class="table table-hover" id="dataTableAggregate">
                   <thead class="">
-                    <tr>
-                        <th colspan="7" class="text-right">SITE ARCHITECTURE</th>
-                        <th>SITEMAP STATUS</th>
-                        <th colspan="6">KEYWORD PERFORMANCE</th>
-                        <th colspan="12">PAGE PERFORMANCE</th>
-                        <th colspan="9">ON PAGE</th>
-                        <th colspan="2">INTERNAL NAV</th>
+                    <tr style="color:white;">
+                        <th colspan="4" class="bg-black">&nbsp;</th>
+                        <th class="bg-dark-blue">&nbsp;</th>
+                        <th colspan="2" class="text-right bg-light-green">SITE ARCHITECTURE</th>
+                        <th class="bg-green">SITEMAP STATUS</th>
+                        <th colspan="6" class="bg-dark-green">KEYWORD PERFORMANCE</th>
+                        <th colspan="11" class="bg-pink">PAGE PERFORMANCE</th>
+                        <th colspan="5"  class="bg-light-grey">ON PAGE</th>
+                        <th class="bg-dark-green">&nbsp;</th>
+                        <th colspan="3" class="bg-green">&nbsp;</th>
+                        <th colspan="2" class="bg-grey">INTERNAL NAV</th>
                     </tr>
                     <tr>
-                        <th>Manual</th>
-                        <th>Manual</th>
-                        <th>Screaming Frog</th>
-                        <th>Manual</th>
-                        <th>Formula</th>
-                        <th>Manual</th>
-                        <th>Screaming Frog</th>
-                        <th>Formula</th>
-                        <th>SEM Rush</th>
-                        <th>SEM Rush</th>
-                        <th>SEM Rush</th>
-                        <th>SEM Rush</th>
-                        <th>SEM Rush</th>
-                        <th>SEM Rush</th>
-                        <th>GSC</th>
-                        <th>GA</th>
-                        <th>GA</th>
-                        <th>GA</th>
-                        <th>GA</th>
-                        <th>GA</th>
-                        <th>GA</th>
-                        <th>GA</th>
-                        <th>GA</th>
-                        <th>GA</th>
-                        <th>Ahrefs</th>
-                        <th>GSC</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
+                        <th class="bg-light-grey">Manual</th>
+                        <th class="bg-light-grey">Manual</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Manual</th>
+                        <th class="bg-pink">Formula</th>
+                        <th class="bg-light-grey">Manual</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-pink">Formula</th>
+                        <th class="bg-light-grey">SEM Rush</th>
+                        <th class="bg-light-grey">SEM Rush</th>
+                        <th class="bg-light-grey">SEM Rush</th>
+                        <th class="bg-light-grey">SEM Rush</th>
+                        <th class="bg-light-grey">SEM Rush</th>
+                        <th class="bg-light-grey">SEM Rush</th>
+                        <th class="bg-light-grey">GSC</th>
+                        <th class="bg-light-grey">GA</th>
+                        <th class="bg-light-grey">GA</th>
+                        <th class="bg-light-grey">GA</th>
+                        <th class="bg-light-grey">GA</th>
+                        <th class="bg-light-grey">GA</th>
+                        <th class="bg-light-grey">GA</th>
+                        <th class="bg-light-grey">GA</th>
+                        <th class="bg-light-grey">GA</th>
+                        <th class="bg-light-grey">Ahrefs</th>
+                        <th class="bg-light-grey">GSC</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
+                        <th class="bg-light-grey">Screaming Frog</th>
                     </tr>
-                    <tr>
-                        <th>URL Action #1</th>
-                        <th>URL Action #2</th>
-                        <th>URL</th>
-                        <th>Page Path</th>
-                        <th>Catgory</th>
-                        <th>PageDepth</th>
-                        <th>In Sitemap?</th>
-                        <th>Main KW</th>
-                        <th>Volume</th>
-                        <th>Ranking</th>
-                        <th>Best KW</th>
-                        <th>Volume</th>
-                        <th>Ranking</th>
-                        <th>Impressions</th>
-                        <th>Sessions</th>
-                        <th>Sales / Goal Completions</th>
-                        <th>$ Conversion Rate</th>
-                        <th>Goal Conversion Rate</th>
-                        <th>% Change Sessions</th>
-                        <th>Bounce rate</th>
-                        <th>Avg. time on page</th>
-                        <th>Losing Traffic?</th>
-                        <th>Links</th>
-                        <th>SERP CTR</th>
-                        <th>Type</th>
-                        <th>Current Title</th>
-                        <th>Meta</th>
-                        <th>H1</th>
-                        <th>Word Coun</th>
-                        <th>Canonical Link Element</th>
-                        <th>Status Code</th>
-                        <th>Index / Noindex</th>
-                        <th>Last Modified</th>
-                        <th>Inlinks</th>
-                        <th>Outlinks</th>
-                        <th>Screaming Frog</th>
-                        <th>Screaming Frog</th>
+                    <tr style="color:white;">
+                        <th class="bg-dark-green">URL Action #1</th>
+                        <th class="bg-dark-green">URL Action #2</th>
+                        <th class="bg-dark-green">URL</th>
+                        <th class="bg-light-color">Final Url</th>
+                        <th class="bg-dark-blue">Page Path</th>
+                        <th class="bg-light-green">Catgory</th>
+                        <th class="bg-light-green">PageDepth</th>
+                        <th class="bg-green">In Sitemap?</th>
+                        <th class="bg-dark-green">Main KW</th>
+                        <th class="bg-dark-green">Volume</th>
+                        <th class="bg-dark-green">Ranking</th>
+                        <th class="bg-dark-green">Best KW</th>
+                        <th class="bg-dark-green">Volume</th>
+                        <th class="bg-dark-green">Ranking</th>
+                        <th class="bg-pink">Impressions</th>
+                        <th class="bg-pink">Sessions</th>
+                        <th class="bg-pink">Sales / Goal Completions</th>
+                        <th class="bg-pink">$ Conversion Rate</th>
+                        <th class="bg-pink">Goal Conversion Rate</th>
+                        <th class="bg-pink">% Change Sessions</th>
+                        <th class="bg-pink">Bounce rate</th>
+                        <th class="bg-pink">Avg. time on page</th>
+                        <th class="bg-pink">Losing Traffic?</th>
+                        <th class="bg-pink">Links</th>
+                        <th class="bg-pink">SERP CTR</th>
+                        <th class="bg-grey">Type</th>
+                        <th class="bg-grey">Current Title</th>
+                        <th class="bg-grey">Meta</th>
+                        <th class="bg-grey">H1</th>
+                        <th class="bg-grey">Word Count</th>
+                        <th class="bg-dark-green">Canonical Link Element</th>
+                        <th class="bg-light-green">Status Code</th>
+                        <th class="bg-light-green">Index / Noindex</th>
+                        <th class="bg-light-green">Last Modified</th>
+                        <th class="bg-grey">Inlinks</th>
+                        <th class="bg-grey">Outlinks</th>
                     </tr>
                   </thead>
                   <tbody>
                     @foreach($analytics as $key => $sitemap)
                     <tr>
-                      <td>test</td>
                       <td>test</td>
                       <td>test</td>
                       <td>test</td>

@@ -20931,11 +20931,52 @@ dl li {
   vertical-align: top;
 }
 
+.bg-black {
+  background-color: rgba(0, 0, 0);
+}
+
+.bg-dark-blue {
+  background-color: rgba(7,55, 99);
+}
+.bg-light-green {
+  background-color: rgba(51, 186, 176);
+}
+.bg-green {
+  background-color: rgba(37, 137, 130);
+}
+.bg-dark-green {
+  background-color: rgba(19, 79, 92);
+}
+
+.bg-pink {
+  background-color: rgba(224, 102, 102);
+}
+.bg-grey {
+  background-color: rgba(69, 129, 142);
+}
+
+.bg-light-grey {
+  background-color: rgba(217, 217, 217);
+}
+.bg-light-color {
+  background-color: rgba(162, 196, 201);
+}
+
 .dataTables_wrapper .dataTable thead th {
   border-bottom-width: 0;
   border: 1px solid rgba(151, 151, 151, 0.18);
   padding: 1.7rem 0.9375rem;
   white-space: nowrap;
+}
+
+.aggregation .dataTables_wrapper .dataTable thead th {
+      padding: 0.7rem 0.9375rem;
+}
+.aggregation .dataTables_wrapper .dataTable tbody tr td {
+      padding: 0.6rem 0.9375rem;
+}
+.aggregation .DTFC_LeftBodyLiner {
+  background-color: white;
 }
 
 .dataTables_wrapper .dataTable thead .sorting:before, .dataTables_wrapper .dataTable thead .sorting:after,
@@ -20980,6 +21021,11 @@ dl li {
   padding: 1.1rem 0.9375rem;
 }
 #dataTable_wrapper .row:last-child {
+      margin: 10px 0px;
+      background: rgba(104, 104, 104, 0.2);
+      padding: 16px 10px;
+}
+#dataTableAggregate_wrapper .row:last-child {
       margin: 10px 0px;
       background: rgba(104, 104, 104, 0.2);
       padding: 16px 10px;
