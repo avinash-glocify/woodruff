@@ -5,8 +5,8 @@ return [
       'setup'                 => 'Setup',
       'sitemap'               => 'Sitemap',
       'google-search-console' => 'Google Search Console',
-      // 'ahrefs'                => 'Ahrefs',
-      'aggregation'           => 'Aggregation',
+      'ahrefs'                => 'Ahrefs',
+      // 'aggregation'           => 'Aggregation',
       'screaming_frogs'       => 'Screaming Frog Crawl'
     ],
     'screaming_frogs' => [
