@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Imports\ProjectDetailImport;
 use App\Imports\SitemapImport;
 use App\Imports\GoogleSearchConsoleImport;
+use App\Imports\ScreaminFrogCrawlsImport;
 use App\Imports\AhrefsImport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -120,6 +121,18 @@ class ProjectDetailController extends Controller
         $import  = new AhrefsImport($project);
 
         Excel::import($import,  request()->file('ahrefs_file'));
+        return redirect()->back()->with(['success' => 'Main Keywords File Imported SuccessFully' ]);
+    }
+
+    public function storeScreamingFrogs(Request $request, $id)
+    {
+        $rules   = ['screaming_frogs_file' => 'required'];
+        $request->validate($rules);
+
+        $project = Project::findOrFail($id);
+        $import  = new ScreaminFrogCrawlsImport($project);
+
+        Excel::import($import,  request()->file('screaming_frogs_file'));
         return redirect()->back()->with(['success' => 'Main Keywords File Imported SuccessFully' ]);
     }
 }

@@ -27,6 +27,10 @@
                 @include('projects.tabs.google-console')
               @elseif($segment == 'ahrefs')
                 @include('projects.tabs.ahrefs')
+              @elseif($segment == 'aggregation')
+                @include('projects.tabs.aggregation')
+              @elseif($segment == 'screaming-frogs')
+                @include('projects.tabs.screaming-frog')
               @else
                 @include('projects.tabs.setup')
               @endif

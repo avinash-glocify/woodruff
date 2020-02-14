@@ -10,6 +10,7 @@ use App\Models\Project;
 use App\Models\SiteMaps;
 use App\Models\Ahref;
 use App\Models\GoogleSearchConsole;
+use App\Models\ScreamingFrog;
 use Auth;
 
 class ProjectController extends Controller
@@ -85,6 +86,20 @@ class ProjectController extends Controller
     {
         $project      = Project::findOrFail($id);
         $analytics    = Ahref::where('project_id', $id)->get();
+        return view('projects.view', compact('analytics', 'project'));
+    }
+
+    public function aggregation($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = Ahref::where('project_id', $id)->get();
+        return view('projects.view', compact('analytics', 'project'));
+    }
+
+    public function screamingFrogs($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = ScreamingFrog::where('project_id', $id)->get();
         return view('projects.view', compact('analytics', 'project'));
     }
 }
