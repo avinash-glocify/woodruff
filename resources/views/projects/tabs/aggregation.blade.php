@@ -98,6 +98,9 @@
                   <tbody>
                     @foreach($analytics as $key => $sitemap)
                     <tr>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td > {{ $sitemap->address }}</td>
                       <td>test</td>
                       <td>test</td>
                       <td>test</td>
@@ -120,20 +123,17 @@
                       <td>test</td>
                       <td>test</td>
                       <td>test</td>
+                      <td>{{ $sitemap->content }}</td>
+                      <td>{{ $sitemap->title_1 }}</td>
+                      <td>{{ $sitemap->meta_description_1 }}</td>
                       <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
+                      <td>{{ $sitemap->word_count }}</td>
+                      <td>{{ $sitemap->canonical_link_element_1 }}</td>
+                      <td>{{ $sitemap->status_code }}</td>
+                      <td>{{ $sitemap->indexability }}</td>
+                      <td>{{ $sitemap->last_modified }}</td>
+                      <td>{{ $sitemap->inlinks }}</td>
+                      <td>{{ $sitemap->outlinks }}</td>
                     </tr>
                     @endforeach
                   </tbody>

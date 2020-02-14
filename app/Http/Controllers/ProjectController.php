@@ -93,7 +93,7 @@ class ProjectController extends Controller
     public function aggregation($id)
     {
         $project      = Project::findOrFail($id);
-        $analytics    = Ahref::where('project_id', $id)->get();
+        $analytics    = ScreamingFrog::where('project_id', $id)->paginate(10);
         return view('projects.view', compact('analytics', 'project'));
     }
 
