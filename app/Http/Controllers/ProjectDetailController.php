@@ -8,6 +8,7 @@ use App\Imports\ProjectDetailImport;
 use App\Imports\SitemapImport;
 use App\Imports\GoogleSearchConsoleImport;
 use App\Imports\ScreaminFrogCrawlsImport;
+use App\Imports\SemRushImport;
 use App\Imports\AhrefsImport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -133,6 +134,18 @@ class ProjectDetailController extends Controller
         $import  = new ScreaminFrogCrawlsImport($project);
 
         Excel::import($import,  request()->file('screaming_frogs_file'));
+        return redirect()->back()->with(['success' => 'Main Keywords File Imported SuccessFully' ]);
+    }
+
+    public function storeSemRush(Request $request, $id)
+    {
+        $rules   = ['sem_rush_file' => 'required'];
+        $request->validate($rules);
+
+        $project = Project::findOrFail($id);
+        $import  = new SemRushImport($project);
+
+        Excel::import($import,  request()->file('sem_rush_file'));
         return redirect()->back()->with(['success' => 'Main Keywords File Imported SuccessFully' ]);
     }
 }

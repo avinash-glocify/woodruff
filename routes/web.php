@@ -10,7 +10,7 @@ Route::group(['middleware' => 'auth'], function() {
   Route::post('project/console/{id}', 'ProjectDetailController@storeConsole')->name('project.console');
   Route::post('project/ahrefs/{id}', 'ProjectDetailController@storeAhrefs')->name('project.Ahrefs');
   Route::post('project/screaming_frogs/{id}', 'ProjectDetailController@storeScreamingFrogs')->name('project.screaming_frogs');
-  Route::post('project/sem_rush/{id}', 'ProjectDetailController@storeSemrush')->name('project.sem_rush');
+  Route::post('project/sem_rush/{id}', 'ProjectDetailController@storeSemRush')->name('project.sem_rush');
 
   Route::get('sample/{type}', 'ProjectController@downloadSample')->name('project.sample');
 
@@ -20,6 +20,7 @@ Route::group(['middleware' => 'auth'], function() {
   Route::get('project/{id}/ahrefs', 'ProjectController@aHrefs')->name('ahrefs');
   Route::get('project/{id}/aggregation', 'ProjectController@aggregation')->name('aggregation');
   Route::get('project/{id}/screaming-frogs', 'ProjectController@screamingFrogs')->name('screaming_frogs');
+  Route::get('project/{id}/sem-rush', 'ProjectController@semRush')->name('sem-rush');
   // users routes
   Route::resource('user', 'UsersController');
 });

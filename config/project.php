@@ -7,7 +7,8 @@ return [
       'google-search-console' => 'Google Search Console',
       'ahrefs'                => 'Ahrefs',
       // 'aggregation'           => 'Aggregation',
-      'screaming_frogs'       => 'Screaming Frog Crawl'
+      'screaming_frogs'       => 'Screaming Frog Crawl',
+      'sem-rush'              => 'SEM Rush'
     ],
     'screaming_frogs' => [
       'address'                        => 'Address',
@@ -58,5 +59,23 @@ return [
       'redirect_url'                   => 'Redirect Url',
       'redirect_type'                  => 'Redirect Type',
       'url_encoded_address'            => 'Url Encoded Address',
+    ],
+    'sum_rush' => [
+        'url'                      =>  'Url',
+        'keyword'                  =>  'Keyword',
+        'position'                 =>  'Position',
+        'previous_position'        =>  'Previous Position',
+        'search_volume'            =>  'Search volume',
+        'keyword_difficulty'       =>  'Keyword Difficulty',
+        'cpc'                      =>  'CPC',
+        'traffic'                  =>  'Traffic',
+        'traffic_percentage'       =>  'Traffic (%)',
+        'traffic_cost'             =>  'Traffic Cost',
+        'competition'              =>  'Competition',
+        'number_of_results'        =>  'Number Of Results',
+        'trends'                   =>  'Trends',
+        'timestamp'                =>  'Timestamp',
+        'serp_features_by_keyword' =>  'Serp Features By Keyword',
+
     ]
 ];

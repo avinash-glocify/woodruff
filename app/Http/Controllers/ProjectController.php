@@ -11,6 +11,7 @@ use App\Models\SiteMaps;
 use App\Models\Ahref;
 use App\Models\GoogleSearchConsole;
 use App\Models\ScreamingFrog;
+use App\Models\SemRush;
 use Auth;
 
 class ProjectController extends Controller
@@ -100,6 +101,13 @@ class ProjectController extends Controller
     {
         $project      = Project::findOrFail($id);
         $analytics    = ScreamingFrog::where('project_id', $id)->get();
+        return view('projects.view', compact('analytics', 'project'));
+    }
+
+    public function semRush($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = SemRush::where('project_id', $id)->get();
         return view('projects.view', compact('analytics', 'project'));
     }
 }

@@ -31,6 +31,8 @@
                 @include('projects.tabs.aggregation')
               @elseif($segment == 'screaming-frogs')
                 @include('projects.tabs.screaming-frog')
+              @elseif($segment == 'sem-rush')
+                @include('projects.tabs.sem_rush')
               @else
                 @include('projects.tabs.setup')
               @endif
