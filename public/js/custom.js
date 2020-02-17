@@ -1,33 +1,38 @@
 $(document).ready(function() {
   $('#dataTable').DataTable();
 
+ const location = window.location.pathname;
+ const path =location.split('/');
+
+if(path[3] && path[3] == 'aggregation') {
   $.ajax({
-       url: '/project/5/aggregation/data',
-       dataType: 'json',
-         beforeSend: function() {
-        // setting a timeout
-        html = "";
-        html += `<div class="text-center"><div class="spinner-border" role="status">`;
-        html += `<span class="sr-only">Loading...</span>`;
-        html +=`</div></div>`;
-        $('#myTable').html(html);
+    url: '/project/'+ path[2]+'/aggregation/data',
+    dataType: 'json',
+    beforeSend: function() {
+      // setting a timeout
+      html = "";
+      html += `<div class="text-center"><div class="spinner-border" role="status">`;
+      html += `<span class="sr-only">Loading...</span>`;
+      html +=`</div></div>`;
+      $('#myTable').html(html);
+    },
+    success: function(data) {
+      $('#myTable').html(data.html);
+      var table = $('#dataTableAggregate').DataTable( {
+        scrollY:        "300px",
+        scrollX:        true,
+        scrollCollapse: true,
+        "ordering": false,
+        // fixedColumns:   {
+          //     leftColumns: 3
+          // }
+        } );
       },
-       success: function(data) {
-         $('#myTable').html(data.html);
-         var table = $('#dataTableAggregate').DataTable( {
-           scrollY:        "300px",
-           scrollX:        true,
-           scrollCollapse: true,
-           "ordering": false,
-           // fixedColumns:   {
-             //     leftColumns: 3
-             // }
-           } );
-       },
-       error: function(e) {
-           console.log(e.responseText);
-       }
+      error: function(e) {
+        console.log(e.responseText);
+      }
     });
+}
 
   $(document).on('click', '.del-btn', function (e) {
     e.preventDefault();
