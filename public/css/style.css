@@ -19126,9 +19126,6 @@ code {
   border: 1px solid #f3f3f3;
   padding: 1rem 1.5rem .2rem 1.5rem;
 }
-.dashboard-tabs .nav-link {
-  padding: 1rem 0.5rem .2rem 0.5rem !important;
-}
 
 @media (max-width: 767px) {
   .nav-tabs .nav-link {
