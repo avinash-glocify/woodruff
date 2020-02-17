@@ -96,7 +96,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @php $removeChar = ["https://", "http://", "/", "www."]; @endphp
+                    @php $removeChar = ["https://", "http://", "www."]; @endphp
                     @foreach($analytics as $key => $sitemap)
                     <tr>
                       <td>&nbsp;</td>

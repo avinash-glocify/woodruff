@@ -23,7 +23,7 @@ class ScreaminFrogCrawlsImport implements ToCollection,WithHeadingRow
     {
         foreach ($rows as $key => $row) {
             if(isset($row['address'])) {
-              $projectDetail      = ScreamingFrog::where(['address' => $row['address'], 'project_id' => $this->project->id ])->first();
+              $projectDetail      = ScreamingFrog::where(['address' => $row['address'], 'status' => $row['status'], 'project_id' => $this->project->id ])->first();
               $data               = $this->getMetaData($row);
               if($projectDetail) {
                 $projectDetail   = $projectDetail->update($data);
