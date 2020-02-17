@@ -1,5 +1,15 @@
 $(document).ready(function() {
-  $('#dataTable').DataTable();
+  $('#dataTable').DataTable({
+    scrollY:        "350px",
+    scrollX:        true,
+    scrollCollapse: true,
+  });
+
+  $('#sitemapDataTable').DataTable({
+    scrollY:        "350px",
+    // scrollX:        true,
+    scrollCollapse: true,
+  });
 
  const location = window.location.pathname;
  const path =location.split('/');

@@ -4,7 +4,7 @@
       <div class="card-header">SiteMaps</div>
       <div class="card-body">
           <div class="table-responsive">
-              <table class="table table-hover" id="dataTable">
+              <table class="table table-hover" id="sitemapDataTable">
                   <thead class="btn-inverse-secondary">
                     <tr>
                         <th>Name</th>

@@ -27,7 +27,7 @@
               </div>
             @endif
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable">
+                <table class="table table-bordered" id="sitemapDataTable">
                     <thead class="btn-inverse-secondary">
                       <tr>
                           <th>#</th>

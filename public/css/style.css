@@ -21023,7 +21023,19 @@ dl li {
       margin: 10px 0px;
       padding: 16px 10px;
 }
+
+#dataTable_wrapper .row:last-child {
+      margin: 10px 0px;
+      background: rgba(104, 104, 104, 0.2);
+      padding: 16px 10px;
+}
 #dataTableAggregate_wrapper .row:last-child {
+      margin: 10px 0px;
+      background: rgba(104, 104, 104, 0.2);
+      padding: 16px 10px;
+}
+
+#sitemapDataTable_wrapper .row:last-child {
       margin: 10px 0px;
       background: rgba(104, 104, 104, 0.2);
       padding: 16px 10px;
