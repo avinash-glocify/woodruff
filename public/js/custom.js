@@ -6,10 +6,11 @@ $(document).ready(function() {
         scrollX:        true,
         scrollCollapse: true,
         "ordering": false,
-        fixedColumns:   {
-            leftColumns: 3
-        }
+        // fixedColumns:   {
+        //     leftColumns: 3
+        // }
     } );
+
 
   $(document).on('click', '.del-btn', function (e) {
     e.preventDefault();
