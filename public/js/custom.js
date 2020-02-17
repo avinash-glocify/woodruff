@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#dataTable').DataTable();
 
   var table = $('#dataTableAggregate').DataTable( {
-        scrollY:        "300px",
+        scrollY:        "450px",
         scrollX:        true,
         scrollCollapse: true,
         "ordering": false,

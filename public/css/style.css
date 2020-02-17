@@ -20972,7 +20972,7 @@ dl li {
 .dataTables_wrapper .dataTable thead th {
       padding: 0.7rem 0.9375rem;
 }
-.dataTables_wrapper .dataTable tbody tr td {
+.aggregation .dataTables_wrapper .dataTable tbody tr td {
       padding: 0.6rem 0.9375rem;
 }
 .DTFC_LeftBodyLiner {
@@ -21021,7 +21021,6 @@ dl li {
 }
 #dataTable_wrapper .row:last-child {
       margin: 10px 0px;
-      background: rgba(104, 104, 104, 0.2);
       padding: 16px 10px;
 }
 #dataTableAggregate_wrapper .row:last-child {
