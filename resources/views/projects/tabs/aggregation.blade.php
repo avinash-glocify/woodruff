@@ -13,9 +13,9 @@
                         <th class="bg-green">SITEMAP STATUS</th>
                         <th colspan="6" class="bg-dark-green">KEYWORD PERFORMANCE</th>
                         <th colspan="11" class="bg-pink">PAGE PERFORMANCE</th>
-                        <th colspan="5"  class="bg-light-grey">ON PAGE</th>
+                        <th colspan="5"  class="bg-grey">ON PAGE</th>
                         <th class="bg-dark-green">&nbsp;</th>
-                        <th colspan="3" class="bg-green">&nbsp;</th>
+                        <th colspan="3" class="bg-light-green">&nbsp;</th>
                         <th colspan="2" class="bg-grey">INTERNAL NAV</th>
                     </tr>
                     <tr>
@@ -123,7 +123,7 @@
                       <td>test</td>
                       <td>test</td>
                       <td>test</td>
-                      <td>test</td>
+                      <td>{{ $sitemap->ctr }}</td>
                       <td>{{ $sitemap->content }}</td>
                       <td>{{ $sitemap->title_1 }}</td>
                       <td>{{ $sitemap->meta_description_1 }}</td>

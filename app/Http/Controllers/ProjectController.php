@@ -113,7 +113,7 @@ class ProjectController extends Controller
                                     ->select('screaming_frogs.address', 'screaming_frogs.title_1', 'screaming_frogs.word_count', 'screaming_frogs.canonical_link_element_1',
                                      'screaming_frogs.meta_description_1','screaming_frogs.content', 'screaming_frogs.status_code','screaming_frogs.indexability','screaming_frogs.last_modified',
                                      'screaming_frogs.inlinks', 'screaming_frogs.outlinks','screaming_frogs.crawl_depth', 'screaming_frogs.last_modified', 'screaming_frogs.h1_1',
-                                    'sem_rushes.keyword','sem_rushes.search_volume','sem_rushes.position' ,'google_search_consoles.impressions',
+                                    'sem_rushes.keyword','sem_rushes.search_volume','sem_rushes.position' ,'google_search_consoles.impressions','google_search_consoles.ctr',
                                     'site_maps.url as site_url')
                                     ->groupBy('screaming_frogs.address')
                                     ->get();
