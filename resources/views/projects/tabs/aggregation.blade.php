@@ -106,7 +106,7 @@
                       <td>{{ str_replace($removeChar, "", $sitemap->address) }}</td>
                       <td>test</td>
                       <td>{{ $sitemap->crawl_depth}}</td>
-                      <td>{{ $sitemap->site_url ? 'Yes' : 'No'}}</td>
+                      <td class="@if($sitemap->site_url) bg-light-green @else bg-pink @endif">{{ $sitemap->site_url ? 'Yes' : 'No'}}</td>
                       <td>{{ $sitemap->keyword}}</td>
                       <td>{{ $sitemap->search_volume}}</td>
                       <td>{{ $sitemap->position}}</td>
