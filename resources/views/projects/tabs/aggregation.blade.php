@@ -96,23 +96,24 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @php $removeChar = ["https://", "http://", "/", "www."]; @endphp
                     @foreach($analytics as $key => $sitemap)
                     <tr>
                       <td>&nbsp;</td>
                       <td>&nbsp;</td>
-                      <td > {{ $sitemap->address }}</td>
+                      <td style="max-width:450px; overflow:hidden; word-break: break-all;"><p> {{ $sitemap->address }}</p></td>
+                      <td>test</td>
+                      <td>{{ str_replace($removeChar, "", $sitemap->address) }}</td>
+                      <td>test</td>
+                      <td>{{ $sitemap->crawl_depth}}</td>
+                      <td>{{ $sitemap->site_url ? 'Yes' : 'No'}}</td>
+                      <td>{{ $sitemap->keyword}}</td>
+                      <td>{{ $sitemap->search_volume}}</td>
+                      <td>{{ $sitemap->position}}</td>
                       <td>test</td>
                       <td>test</td>
                       <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
-                      <td>test</td>
+                      <td>{{ $sitemap->impressions}}</td>
                       <td>test</td>
                       <td>test</td>
                       <td>test</td>
@@ -126,7 +127,7 @@
                       <td>{{ $sitemap->content }}</td>
                       <td>{{ $sitemap->title_1 }}</td>
                       <td>{{ $sitemap->meta_description_1 }}</td>
-                      <td>test</td>
+                      <td>{{ $sitemap->h1_1 }}</td>
                       <td>{{ $sitemap->word_count }}</td>
                       <td>{{ $sitemap->canonical_link_element_1 }}</td>
                       <td>{{ $sitemap->status_code }}</td>
