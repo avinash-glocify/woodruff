@@ -93,8 +93,7 @@ class ProjectController extends Controller
     public function aggregation($id)
     {
         $project      = Project::findOrFail($id);
-        $analytics    = $this->mappedData($id);
-        return view('projects.view', compact('analytics', 'project'));
+        return view('projects.view', compact('project'));
     }
 
     public function screamingFrogs($id)
@@ -118,6 +117,15 @@ class ProjectController extends Controller
                                     ->groupBy('screaming_frogs.address')
                                     ->get();
         return $analytics;
+    }
+
+    public function aggregationData($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = $this->mappedData($id);
+        return response()->json([
+                  'html' => view('projects.tabs.aggragation-table', compact('analytics', 'project'))->render()
+          ]);
     }
 
     public function semRush($id)

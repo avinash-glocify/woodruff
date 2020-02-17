@@ -21,6 +21,7 @@ Route::group(['middleware' => 'auth'], function() {
   Route::get('project/{id}/aggregation', 'ProjectController@aggregation')->name('aggregation');
   Route::get('project/{id}/screaming-frogs', 'ProjectController@screamingFrogs')->name('screaming_frogs');
   Route::get('project/{id}/sem-rush', 'ProjectController@semRush')->name('sem-rush');
+  Route::get('project/{id}/aggregation/data', 'ProjectController@aggregationData')->name('aggregationData');
   // users routes
   Route::resource('user', 'UsersController');
 });
