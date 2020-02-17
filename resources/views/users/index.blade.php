@@ -41,7 +41,7 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>
-                          <div class="template-demo justify-content-between flex-nowrap">
+                          <div class="">
                             <a type="button" href="javascript:void(0);" data-url="{{ route('user.destroy', [$user->id])}}"  title="Delete" class="btn btn-danger btn-rounded btn-icon p-2 del-btn @if(Auth::user()->id == $user->id) disabled @endif"><i class="mdi mdi-delete-forever"></i></a>
                             <a type="button" href="{{ route('user.edit', [$user->id])}}"  title="Edit" class="btn btn-info btn-rounded btn-icon p-2"><i class="mdi mdi-grease-pencil"></i></a>
                           </div>
