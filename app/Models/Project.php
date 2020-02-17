@@ -24,13 +24,25 @@ class Project extends Model
         return $this->hasMany(\App\Models\Ahref::class);
     }
 
+    public function screamingFrogs()
+    {
+        return $this->hasMany(\App\Models\ScreamingFrog::class);
+    }
+
+    public function semRush()
+    {
+        return $this->hasMany(\App\Models\SemRush::class);
+    }
+
     public static function boot() {
         parent::boot();
 
         static::deleting(function($projcet) {
              $projcet->sitemap()->delete();
              $projcet->googleSearchConsole()->delete();
+             $projcet->semRush()->delete();
              $projcet->ahrefs()->delete();
+             $projcet->screamingFrogs()->delete();
         });
     }
 }

@@ -115,6 +115,7 @@ class ProjectController extends Controller
                                      'screaming_frogs.inlinks', 'screaming_frogs.outlinks','screaming_frogs.crawl_depth', 'screaming_frogs.last_modified', 'screaming_frogs.h1_1',
                                     'sem_rushes.keyword','sem_rushes.search_volume','sem_rushes.position' ,'google_search_consoles.impressions',
                                     'site_maps.url as site_url')
+                                    ->groupBy('screaming_frogs.address')
                                     ->get();
         return $analytics;
     }
