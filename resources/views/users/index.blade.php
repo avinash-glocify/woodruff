@@ -29,7 +29,7 @@
             <div class="table-responsive">
                 <table class="table table-bordered" id="sitemapDataTable">
                     <thead class="btn-inverse-secondary">
-                      <tr>
+                      <tr class="bg-dark-green text-white">
                           <th>Name</th>
                           <th>Email</th>
                           <th>Actions</th>

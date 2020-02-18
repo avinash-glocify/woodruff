@@ -6,7 +6,7 @@
           <div class="table-responsive">
               <table class="table table-hover" id="sitemapDataTable">
                   <thead class="btn-inverse-secondary">
-                    <tr>
+                    <tr class="bg-dark-green text-white">
                         <th>Name</th>
                         <th>Url</th>
                     </tr>
