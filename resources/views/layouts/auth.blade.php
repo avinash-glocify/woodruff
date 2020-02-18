@@ -9,12 +9,16 @@
 
   <title>{{ config('app.name', 'Laravel') }}</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" /> -->
   <link href="{{ asset('vendors/mdi/css/materialdesignicons.min.css') }}" rel="stylesheet">
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
-  <link href='https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css' rel='stylesheet' type='text/css'>
-  <link href='https://cdn.datatables.net/fixedcolumns/3.3.0/css/fixedColumns.bootstrap4.min.css' rel='stylesheet' type='text/css'>
+  <link href="{{ asset('css/sweet-alert.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/select.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/data-table.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/fixed-columns.bootstrap.min.css') }}" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css"> -->
+  <!-- <link href='https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css' rel='stylesheet' type='text/css'> -->
+  <!-- <link href='https://cdn.datatables.net/fixedcolumns/3.3.0/css/fixedColumns.bootstrap4.min.css' rel='stylesheet' type='text/css'> -->
 
   <style>
   .invalid-feedback {
@@ -27,8 +31,10 @@
     height: 50px !important;
   }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="{{ asset('js/sweet-alert.min.js')}} "></script>
+  <script src="{{ asset('js/jquery.min.js') }}"></script>
 </head>
 <body>
   <div id="app">
@@ -69,11 +75,16 @@
     @endif
   </div>
 </body>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-<script src="https://cdn.datatables.net/fixedcolumns/3.3.0/js/dataTables.fixedColumns.min.js"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script> -->
+<!-- <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script> -->
+<script src="{{ asset('js/bootstrap-bundle.min.js')}} "></script>
+<script src="{{ asset('js/jquery-data-table.min.js')}} "></script>
+<script src="{{ asset('js/fixed-column.min.js')}} "></script>
+<script src="{{ asset('js/data-table-bootstrap.min.js')}} "></script>
+<script src="{{ asset('js/select.min.js')}} "></script>
+<!-- <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script> -->
+<!-- <script src="https://cdn.datatables.net/fixedcolumns/3.3.0/js/dataTables.fixedColumns.min.js"></script> -->
 <script src="{{ asset('js/theme/template.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}" defer></script>
 </html>
