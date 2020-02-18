@@ -20996,7 +20996,7 @@ dl li {
 .dataTables_wrapper .dataTable thead .sorting_asc_disabled:before,
 .dataTables_wrapper .dataTable thead .sorting_desc_disabled:before {
   content: "\F05D";
-  right: 2.4em;
+  right: 0.8rem;
   bottom: 0.5rem;
 }
 
