@@ -1,31 +1,25 @@
 $(document).ready(function() {
-  $('#dataTable').DataTable({
-    scrollY:        "350px",
-    scrollX:        true,
-    scrollCollapse: true,
-  });
 
   $('#sitemapDataTable').DataTable({
     scrollY:        "350px",
-    // scrollX:        true,
     scrollCollapse: true,
   });
 
- const location = window.location.pathname;
- const path =location.split('/');
+  const location = window.location.pathname;
+  const path =location.split('/');
 
-if(path[3]) {
-  const paths = ['aggregation', 'sitemap', 'google-search-console', 'ahrefs', 'screaming-frogs', 'sem-rush'];
-  if(paths.includes(path[3])) {
-    const url = '/project/'+ path[2]+'/'+path[3]+'/data';
-    const dataTable = '#dataTable';
-    var scrollx = true;
-    if(path[3] == 'sitemap') {
-      scrollx = false;
+  if(path[3]) {
+    const paths = ['aggregation', 'sitemap', 'google-search-console', 'ahrefs', 'screaming-frogs', 'sem-rush'];
+    if(paths.includes(path[3])) {
+      const url = '/project/'+ path[2]+'/'+path[3]+'/data';
+      const dataTable = '#dataTable';
+      var scrollx = true;
+      if(path[3] == 'sitemap' || path[3] == 'google-search-console') {
+        scrollx = false;
+      }
+      setDataTable(url, dataTable, scrollx)
     }
-    setDataTable(url, dataTable, scrollx)
   }
-}
 
   function setDataTable(url, dataTable, scrollx = true)
   {
@@ -34,7 +28,7 @@ if(path[3]) {
       dataType: 'json',
       beforeSend: function() {
         html = "";
-        html += `<div class="text-center"><div class="spinner-border" role="status">`;
+        html += `<div class="text-center"><div class="spinner-border text-info"  role="status">`;
         html += `<span class="sr-only">Loading...</span>`;
         html +=`</div></div>`;
         $('#myTable').html(html);
