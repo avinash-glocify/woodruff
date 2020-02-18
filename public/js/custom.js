@@ -14,7 +14,7 @@ $(document).ready(function() {
       const url = '/project/'+ path[2]+'/'+path[3]+'/data';
       const dataTable = '#dataTable';
       var scrollx = true;
-      if(path[3] == 'sitemap' || path[3] == 'google-search-console') {
+      if(path[3] == 'sitemap') {
         scrollx = false;
       }
       setDataTable(url, dataTable, scrollx)
