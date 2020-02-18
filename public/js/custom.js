@@ -36,7 +36,7 @@ $(document).ready(function() {
       success: function(data) {
         $('#myTable').html(data.html);
         var table = $(dataTable).DataTable( {
-          scrollY:        "350px",
+          scrollY:        "335px",
           scrollX:        scrollx,
           scrollCollapse: true,
           "ordering": true,

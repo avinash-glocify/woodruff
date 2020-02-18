@@ -9983,6 +9983,7 @@ pre code {
 }
 #dataTable_wrapper select {
   padding: 0.5rem !important;
+  height: 2.2rem;
 }
 
 .table tbody + tbody {
@@ -18737,7 +18738,7 @@ code {
 
 /* Utilities */
 .grid-margin {
-  margin-bottom: 1.875rem;
+  margin-bottom: 0.875rem;
 }
 
 @media (min-width: 576px) {
@@ -20969,8 +20970,14 @@ dl li {
 .dataTables_wrapper .dataTable thead th {
       padding: 0.7rem 0.9375rem;
 }
+ .dataTables_wrapper .dataTable tbody tr td {
+      padding: .8rem 0.9375rem;
+}
 .aggregation .dataTables_wrapper .dataTable tbody tr td {
-      padding: 0.6rem 0.9375rem;
+      padding: 0.2rem 0.9375rem;
+}
+.aggregation .dataTables_wrapper .dataTable thead th {
+      padding: 0.4rem 0.9375rem;
 }
 .DTFC_LeftBodyLiner {
   background-color: white;
@@ -20999,6 +21006,13 @@ dl li {
   right: 0.8rem;
   bottom: 0.5rem;
 }
+.aggregation .dataTables_wrapper .dataTable thead .sorting:before,
+.aggregation .dataTables_wrapper .dataTable thead .sorting_asc:before,
+.aggregation .dataTables_wrapper .dataTable thead .sorting_desc:before,
+.aggregation .dataTables_wrapper .dataTable thead .sorting_asc_disabled:before,
+.aggregation .dataTables_wrapper .dataTable thead .sorting_desc_disabled:before {
+  bottom: 0.1rem;
+}
 
 .dataTables_wrapper .dataTable thead .sorting:after,
 .dataTables_wrapper .dataTable thead .sorting_asc:after,
@@ -21008,6 +21022,13 @@ dl li {
   content: "\F045";
   right: 2em;
   bottom: 0.5rem;
+}
+.aggregation .dataTables_wrapper .dataTable thead .sorting:after,
+.aggregation .dataTables_wrapper .dataTable thead .sorting_asc:after,
+.aggregation .dataTables_wrapper .dataTable thead .sorting_desc:after,
+.aggregation .dataTables_wrapper .dataTable thead .sorting_asc_disabled:after,
+.aggregation .dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
+  bottom: 0.1rem;
 }
 
 .dataTables_wrapper .dataTable tbody tr td {
@@ -21022,9 +21043,28 @@ dl li {
 }
 
 #dataTable_wrapper .row:last-child {
-      margin: 10px 0px;
+      margin:0px;
       background: rgba(104, 104, 104, 0.2);
-      padding: 16px 10px;
+      padding:6px 10px;
+}
+.aggregation #dataTable_wrapper .row:first-child {
+  /* display: none; */
+}
+#aggregation label {
+  margin-bottom: 0px;
+}
+#aggregation .content-wrapper {
+  padding-bottom: 0px;
+}
+
+#aggregation footer {
+  display: none;
+}
+.dashboard-tabs .nav-tabs .nav-link {
+  padding: .5rem 1.5rem .5rem 1.5rem;
+}
+.aggregation .card .card-body {
+    padding: 0.5rem 1.875rem;
 }
 #dataTableAggregate_wrapper .row:last-child {
       margin: 10px 0px;
@@ -21193,7 +21233,7 @@ dl li {
 
 .content-wrapper {
   /* background: #f3f3f3; */
-  padding: 2.1rem 1.04rem;
+  padding: 1.1rem 1.04rem;
   width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1;

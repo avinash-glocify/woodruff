@@ -6,7 +6,7 @@
     <div class="col-md-12 grid-margin stretch-card">
       <div class="card">
         <div class="card-body dashboard-tabs p-0">
-          <ul class="nav nav-tabs px-4 pb-4" role="tablist">
+          <ul class="nav nav-tabs px-4" role="tablist">
             @foreach(config('project.tabs') as $key => $tab)
               <li class="nav-item">
                 <a class="nav-link @if($segment == $key) active @endif" id="overview-tab"  href="{{ route($key, [$project->id]) }}" role="tab" aria-controls="overview" aria-selected="true">{{$tab}}</a>

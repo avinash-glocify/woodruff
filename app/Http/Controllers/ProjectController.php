@@ -104,12 +104,14 @@ class ProjectController extends Controller
       $analytics    = ScreamingFrog::leftJoin('sem_rushes','sem_rushes.url', 'screaming_frogs.address')
                                      ->leftJoin('google_search_consoles','google_search_consoles.page', 'screaming_frogs.address')
                                      ->leftJoin('site_maps','site_maps.url', 'screaming_frogs.address')
+                                     ->leftJoin('ahrefs','ahrefs.link_url', 'screaming_frogs.address')
                                     ->where('screaming_frogs.project_id', $id)
+                                    ->distinct()
                                     ->select('screaming_frogs.address', 'screaming_frogs.title_1', 'screaming_frogs.word_count', 'screaming_frogs.canonical_link_element_1',
                                      'screaming_frogs.meta_description_1','screaming_frogs.content', 'screaming_frogs.status_code','screaming_frogs.indexability','screaming_frogs.last_modified',
                                      'screaming_frogs.inlinks', 'screaming_frogs.outlinks','screaming_frogs.crawl_depth', 'screaming_frogs.last_modified', 'screaming_frogs.h1_1',
                                     'sem_rushes.keyword','sem_rushes.search_volume','sem_rushes.position' ,'google_search_consoles.impressions','google_search_consoles.ctr',
-                                    'site_maps.url as site_url')
+                                    'site_maps.url as site_url', \DB::raw('COUNT(ahrefs.link_url) as link_count'))
                                     ->groupBy('screaming_frogs.address')
                                     ->get();
         return $analytics;

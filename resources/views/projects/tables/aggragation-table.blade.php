@@ -116,7 +116,7 @@
         <td>test</td>
         <td>test</td>
         <td>test</td>
-        <td>test</td>
+        <td>{{ $sitemap->link_count }}</td>
         <td>{{ $sitemap->ctr }}</td>
         <td>{{ $sitemap->content }}</td>
         <td>{{ $sitemap->title_1 }}</td>
