@@ -14,40 +14,17 @@ $(document).ready(function() {
  const location = window.location.pathname;
  const path =location.split('/');
 
-if(path[3] && path[3] == 'aggregation') {
-  const url = '/project/'+ path[2]+'/aggregation/data';
-  const dataTable = '#dataTableAggregate';
-  setDataTable(url, dataTable)
-}
-
-if(path[3] && path[3] == 'sitemap') {
-  const url = '/project/'+ path[2]+'/sitemap/data';
-  const dataTable = '#dataTable';
-  setDataTable(url, dataTable, false)
-}
-
-if(path[3] && path[3] == 'google-search-console') {
-  const url = '/project/'+ path[2]+'/google-search-console/data';
-  const dataTable = '#dataTable';
-  setDataTable(url, dataTable)
-}
-
-if(path[3] && path[3] == 'ahrefs') {
-  const url = '/project/'+ path[2]+'/ahrefs/data';
-  const dataTable = '#dataTable';
-  setDataTable(url, dataTable)
-}
-
-if(path[3] && path[3] == 'screaming-frogs') {
-  const url = '/project/'+ path[2]+'/screaming-frogs/data';
-  const dataTable = '#dataTable';
-  setDataTable(url, dataTable)
-}
-
-if(path[3] && path[3] == 'sem-rush') {
-  const url = '/project/'+ path[2]+'/sem-rush/data';
-  const dataTable = '#dataTable';
-  setDataTable(url, dataTable)
+if(path[3]) {
+  const paths = ['aggregation', 'sitemap', 'google-search-console', 'ahrefs', 'screaming-frogs', 'sem-rush'];
+  if(paths.includes(path[3])) {
+    const url = '/project/'+ path[2]+'/'+path[3]+'/data';
+    const dataTable = '#dataTable';
+    var scrollx = true;
+    if(path[3] == 'sitemap') {
+      scrollx = false;
+    }
+    setDataTable(url, dataTable, scrollx)
+  }
 }
 
   function setDataTable(url, dataTable, scrollx = true)
@@ -56,7 +33,6 @@ if(path[3] && path[3] == 'sem-rush') {
       url: url,
       dataType: 'json',
       beforeSend: function() {
-        // setting a timeout
         html = "";
         html += `<div class="text-center"><div class="spinner-border" role="status">`;
         html += `<span class="sr-only">Loading...</span>`;

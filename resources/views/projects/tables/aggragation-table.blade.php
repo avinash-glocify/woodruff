@@ -1,4 +1,4 @@
-<table class="table table-hover" id="dataTableAggregate">
+<table class="table table-hover" id="dataTable">
     <thead class="">
       <tr style="color:white;">
           <th colspan="4" class="bg-black">&nbsp;</th>
