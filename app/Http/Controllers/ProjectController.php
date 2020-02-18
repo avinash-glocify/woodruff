@@ -71,23 +71,20 @@ class ProjectController extends Controller
     public function sitemap($id)
     {
         $project = Project::findOrFail($id);
-        $sitemaps = SiteMaps::where('project_id', $id)->get();
-        return view('projects.view', compact('sitemaps', 'project'));
+        return view('projects.view', compact('project'));
     }
 
 
     public function googleConsole($id)
     {
         $project      = Project::findOrFail($id);
-        $analytics    = GoogleSearchConsole::where('project_id', $id)->get();
-        return view('projects.view', compact('analytics', 'project'));
+        return view('projects.view', compact('project'));
     }
 
     public function aHrefs($id)
     {
         $project      = Project::findOrFail($id);
-        $analytics    = Ahref::where('project_id', $id)->get();
-        return view('projects.view', compact('analytics', 'project'));
+        return view('projects.view', compact('project'));
     }
 
     public function aggregation($id)
@@ -99,8 +96,7 @@ class ProjectController extends Controller
     public function screamingFrogs($id)
     {
         $project      = Project::findOrFail($id);
-        $analytics    = ScreamingFrog::where('project_id', $id)->get();
-        return view('projects.view', compact('analytics', 'project'));
+        return view('projects.view', compact('project'));
     }
 
     public function mappedData($id)
@@ -128,11 +124,55 @@ class ProjectController extends Controller
           ]);
     }
 
+    public function sitemapData($id)
+    {
+        $project      = Project::findOrFail($id);
+        $sitemaps     = SiteMaps::where('project_id', $id)->get();
+        return response()->json([
+                  'html' => view('projects.tables.sitemap-table', compact('sitemaps', 'project'))->render()
+          ]);
+    }
+
+    public function searchConsoleData($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = GoogleSearchConsole::where('project_id', $id)->get();
+        return response()->json([
+                  'html' => view('projects.tables.google-console-table', compact('analytics', 'project'))->render()
+          ]);
+    }
+
+    public function ahrefsData($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = Ahref::where('project_id', $id)->get();
+        return response()->json([
+                  'html' => view('projects.tables.ahrefs-table', compact('analytics', 'project'))->render()
+          ]);
+    }
+
+    public function screamingFrogData($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = ScreamingFrog::where('project_id', $id)->get();
+        return response()->json([
+                  'html' => view('projects.tables.screaming-frog-table', compact('analytics', 'project'))->render()
+          ]);
+    }
+
+    public function semRushData($id)
+    {
+        $project      = Project::findOrFail($id);
+        $analytics    = SemRush::where('project_id', $id)->get();
+        return response()->json([
+                  'html' => view('projects.tables.sem-rush-table', compact('analytics', 'project'))->render()
+          ]);
+    }
+
 
     public function semRush($id)
     {
         $project      = Project::findOrFail($id);
-        $analytics    = SemRush::where('project_id', $id)->get();
-        return view('projects.view', compact('analytics', 'project'));
+        return view('projects.view', compact('project'));
     }
 }

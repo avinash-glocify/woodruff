@@ -3,8 +3,7 @@
     <div class="card">
       <div class="card-header">Screaming Frog Crawl</div>
       <div class="card-body">
-          <div class="table-responsive">
-            @include('projects.tables.screaming-frog-table')
+          <div class="table-responsive" id="myTable">
         </div>
       </div>
     </div>

@@ -3,8 +3,7 @@
     <div class="card">
       <div class="card-header">SEM Rush</div>
       <div class="card-body">
-          <div class="table-responsive">
-            @include('projects.tables.sem-rush-table')
+          <div class="table-responsive" id="myTable">
         </div>
       </div>
     </div>

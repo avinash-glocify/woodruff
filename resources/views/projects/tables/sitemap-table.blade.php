@@ -1,4 +1,4 @@
-<table class="table table-hover" id="sitemapDataTable">
+<table class="table table-hover" id="dataTable">
     <thead class="btn-inverse-secondary">
       <tr class="bg-dark-green text-white">
           <th>Name</th>

@@ -22,6 +22,11 @@ Route::group(['middleware' => 'auth'], function() {
   Route::get('project/{id}/screaming-frogs', 'ProjectController@screamingFrogs')->name('screaming_frogs');
   Route::get('project/{id}/sem-rush', 'ProjectController@semRush')->name('sem-rush');
   Route::get('project/{id}/aggregation/data', 'ProjectController@aggregationData')->name('aggregationData');
+  Route::get('project/{id}/sitemap/data', 'ProjectController@sitemapData')->name('sitemapData');
+  Route::get('project/{id}/google-search-console/data', 'ProjectController@searchConsoleData')->name('searchConsoleData');
+  Route::get('project/{id}/ahrefs/data', 'ProjectController@ahrefsData')->name('ahrefsData');
+  Route::get('project/{id}/screaming-frogs/data', 'ProjectController@screamingFrogData')->name('screamingFrogData');
+  Route::get('project/{id}/sem-rush/data', 'ProjectController@semRushData')->name('semRushData');
   // users routes
   Route::resource('user', 'UsersController');
 });
