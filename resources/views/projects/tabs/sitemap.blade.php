@@ -4,22 +4,7 @@
       <div class="card-header">SiteMaps</div>
       <div class="card-body">
           <div class="table-responsive">
-              <table class="table table-hover" id="sitemapDataTable">
-                  <thead class="btn-inverse-secondary">
-                    <tr class="bg-dark-green text-white">
-                        <th>Name</th>
-                        <th>Url</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @foreach($sitemaps as $key => $sitemap)
-                    <tr>
-                      <td>{{$sitemap->name}}</td>
-                      <td> {{$sitemap->url}}</td>
-                    </tr>
-                    @endforeach
-                  </tbody>
-              </table>
+                @include('projects.tables.sitemap-table')
         </div>
       </div>
     </div>
