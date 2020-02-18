@@ -169,7 +169,6 @@ class ProjectController extends Controller
           ]);
     }
 
-
     public function semRush($id)
     {
         $project      = Project::findOrFail($id);
