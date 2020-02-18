@@ -19,7 +19,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('{id}/google-search-console', 'ProjectController@googleConsole')->name('google-search-console');
     Route::get('{id}/ahrefs', 'ProjectController@aHrefs')->name('ahrefs');
     Route::get('{id}/aggregation', 'ProjectController@aggregation')->name('aggregation');
-    Route::get('{id}/screaming-frogs', 'ProjectController@screamingFrogs')->name('screaming_frogs');
+    Route::get('{id}/screaming-frogs', 'ProjectController@screamingFrogs')->name('screaming-frogs');
     Route::get('{id}/sem-rush', 'ProjectController@semRush')->name('sem-rush');
 
     //data table routes

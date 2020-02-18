@@ -7,7 +7,7 @@ return [
       'sitemap'               => 'Sitemap',
       'google-search-console' => 'Google Search Console',
       'ahrefs'                => 'Ahrefs',
-      'screaming_frogs'       => 'Screaming Frog Crawl',
+      'screaming-frogs'       => 'Screaming Frog Crawl',
       'sem-rush'              => 'SEM Rush'
     ],
     'screaming_frogs' => [
