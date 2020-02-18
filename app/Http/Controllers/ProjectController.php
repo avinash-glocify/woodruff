@@ -124,9 +124,10 @@ class ProjectController extends Controller
         $project      = Project::findOrFail($id);
         $analytics    = $this->mappedData($id);
         return response()->json([
-                  'html' => view('projects.tabs.aggragation-table', compact('analytics', 'project'))->render()
+                  'html' => view('projects.tables.aggragation-table', compact('analytics', 'project'))->render()
           ]);
     }
+
 
     public function semRush($id)
     {
