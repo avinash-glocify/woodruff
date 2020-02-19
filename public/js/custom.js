@@ -16,16 +16,75 @@ $(document).ready(function() {
       var scrollx = true;
       var height  ="470px"
       if(path[3] == 'sitemap') {
-        scrollx = false;
+        var table = $('#dataTable').DataTable({
+          scrollY: height,
+          scrollX: true,
+          scrollCollapse: true,
+          autoWidth: false,
+          "ajax": url,
+          "pageLength": 50,
+          "sDom": "Rlfrtip",
+          "columns": [
+            { "data": "name"},
+            { "data": "url" },
+          ]
+        });
+        return true;
       }
       if(path[3] == 'aggregation') {
-        height = '430px';
+        var table = $('#dataTable').DataTable( {
+          scrollY:'430px',
+          scrollX: true,
+          scrollCollapse: true,
+          autoWidth: false,
+          "ajax": url,
+          "pageLength": 50,
+          "columns": [
+            { "data": "url_1" },
+            { "data": "url_2" },
+            { "data": "address", width:'200px' },
+            { "data": "final_url" },
+            { "data": "path" },
+            { "data": "category" },
+            { "data": "crawl_depth" },
+            { "data": "site_url" },
+            { "data": "keyword" },
+            { "data": "search_volume" },
+            { "data": "position" },
+            { "data": "best_keyword" },
+            { "data": "best_valume" },
+            { "data": "best_position" },
+            { "data": "impressions" },
+            { "data": "session" },
+            { "data": "goal_completion" },
+            { "data": "conversion_rate" },
+            { "data": "goal_conversion_rate" },
+            { "data": "change_session" },
+            { "data": "bounce_rate" },
+            { "data": "avg_time_page" },
+            { "data": "losing_trafic" },
+            { "data": "link_count" },
+            { "data": "ctr" },
+            { "data": "content" },
+            { "data": "title_1" },
+            { "data": "meta_description_1" },
+            { "data": "h1_1" },
+            { "data": "word_count" },
+            { "data": "canonical_link_element_1" },
+            { "data": "status_code" },
+            { "data": "indexability" },
+            { "data": "last_modified" },
+            { "data": "inlinks" },
+            { "data": "outlinks" },
+          ]
+        });
+        return true;
       }
-      setDataTable(url, dataTable, scrollx,height)
+        setDataTable(url, dataTable ,height, path[3])
+      }
     }
-  }
 
-  function setDataTable(url, dataTable, scrollx = true, scrollY)
+  function setDataTable(url, dataTable, scrollx = true, scrollY, tableType)
   {
     $.ajax({
       url: url,
@@ -47,7 +106,7 @@ $(document).ready(function() {
           // fixedColumns:   {
           //       leftColumns: 3
           //   }
-          } );
+        });
         },
         error: function(e) {
           console.log(e.responseText);

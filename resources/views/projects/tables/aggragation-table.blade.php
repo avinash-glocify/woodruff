@@ -89,46 +89,4 @@
           <th class="bg-grey">Outlinks</th>
       </tr>
     </thead>
-    <tbody>
-      @foreach($analytics as $key => $sitemap)
-      <tr>
-        <td>{{ $sitemap->url_1 }}</td>
-        <td>{{ $sitemap->url_2 }}</td>
-        <td style="max-width: 100px; overflow:hidden; word-break: break-all;"><p style="word-break: break-all;"> {{ $sitemap->address }}</p></td>
-        <td>{{ $sitemap->final_url }}</td>
-        <td>{{ $sitemap->path }}</td>
-        <td>{{ $sitemap->category}}</td>
-        <td>{{ $sitemap->crawl_depth}}</td>
-        <td class="@if($sitemap->site_url) bg-light-green @else bg-pink @endif">{{ $sitemap->site_url ? 'Yes' : 'No'}}</td>
-        <td>{{ $sitemap->keyword}}</td>
-        <td>{{ $sitemap->search_volume}}</td>
-        <td>{{ $sitemap->position}}</td>
-        <td>{{ $sitemap->best_keyword}}</td>
-        <td>{{ $sitemap->best_valume}}</td>
-        <td>{{ $sitemap->best_position}}</td>
-        <td>{{ $sitemap->impressions}}</td>
-        <td>{{ $sitemap->session }}</td>
-        <td>{{ $sitemap->goal_completion }}</td>
-        <td>{{ $sitemap->conversion_rate }}</td>
-        <td>{{ $sitemap->goal_conversion_rate }}</td>
-        <td>{{ $sitemap->change_session }}</td>
-        <td>{{ $sitemap->bounce_rate }}</td>
-        <td>{{ $sitemap->avg_time_page }}</td>
-        <td>{{ $sitemap->losing_trafic }}</td>
-        <td>{{ \App\Models\Ahref::where('link_url', $sitemap->address)->count() }}</td>
-        <td>{{ $sitemap->ctr }}</td>
-        <td>{{ $sitemap->content }}</td>
-        <td>{{ $sitemap->title_1 }}</td>
-        <td>{{ $sitemap->meta_description_1 }}</td>
-        <td>{{ $sitemap->h1_1 }}</td>
-        <td>{{ $sitemap->word_count }}</td>
-        <td>{{ $sitemap->canonical_link_element_1 }}</td>
-        <td>{{ $sitemap->status_code }}</td>
-        <td>{{ $sitemap->indexability }}</td>
-        <td>{{ $sitemap->last_modified }}</td>
-        <td>{{ $sitemap->inlinks }}</td>
-        <td>{{ $sitemap->outlinks }}</td>
-      </tr>
-      @endforeach
-    </tbody>
 </table>
