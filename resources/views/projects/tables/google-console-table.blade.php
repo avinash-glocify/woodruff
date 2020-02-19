@@ -9,14 +9,5 @@
       </tr>
     </thead>
     <tbody>
-      @foreach($analytics as $key => $analytic)
-      <tr>
-        <td>{{$analytic->page}}</td>
-        <td> {{$analytic->impressions}}</td>
-        <td> {{$analytic->clicks}}</td>
-        <td> {{$analytic->ctr}}</td>
-        <td> {{$analytic->position}}</td>
-      </tr>
-      @endforeach
     </tbody>
 </table>

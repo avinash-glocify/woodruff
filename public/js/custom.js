@@ -117,6 +117,25 @@ $(document).ready(function() {
         });
         return true;
       }
+      if(path[3] == 'google-search-console') {
+        var table = $('#dataTable').DataTable({
+          scrollY:'430px',
+          scrollX: true,
+          scrollCollapse: true,
+          autoWidth: false,
+          "ajax": url,
+          "pageLength": 50,
+          "ordering": false,
+          "columns": [
+            { "data": "page" },
+            { "data": "impressions" },
+            { "data": "clicks"},
+            { "data": "ctr" },
+            { "data": "position" },
+          ]
+        });
+        return true;
+      }
         setDataTable(url, dataTable ,scrollx,height, path[3])
       }
     }
