@@ -80,7 +80,7 @@ $(document).ready(function() {
         });
         return true;
       }
-        setDataTable(url, dataTable ,height, path[3])
+        setDataTable(url, dataTable ,scrollx,height, path[3])
       }
     }
 
