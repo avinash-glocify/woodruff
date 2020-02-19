@@ -81,6 +81,68 @@ $(document).ready(function() {
         });
         return true;
       }
+      if(path[3] == 'screaming-frogs') {
+        var table = $('#dataTable').DataTable({
+          scrollY:'430px',
+          scrollX: true,
+          scrollCollapse: true,
+          autoWidth: false,
+          "ajax": url,
+          "pageLength": 50,
+          "ordering": false,
+          "columns": [
+            { "data": "address" },
+            { "data": "content" },
+            { "data": "status_code"},
+            { "data": "status" },
+            { "data": "indexability" },
+            { "data": "indexability_status" },
+            { "data": "title_1" },
+            { "data": "title_1_length" },
+            { "data": "title_1_pixel_width" },
+            { "data": "meta_description_1" },
+            { "data": "meta_description_1_length" },
+            { "data": "meta_description_1_pixel_width" },
+            { "data": "meta_keyword_1" },
+            { "data": "meta_keywords_1_length" },
+            { "data": "h1_1" },
+            { "data": "h1_1_length" },
+            { "data": "h1_2" },
+            { "data": "h1_2_length" },
+            { "data": "h2_1" },
+            { "data": "h2_1_length" },
+            { "data": "h2_2" },
+            { "data": "h2_2_length" },
+            { "data": "meta_robots_1" },
+            { "data": "x_robots_tag_1" },
+            { "data": "meta_refresh_1" },
+            { "data": "canonical_link_element_1" },
+            { "data": "relnext_1" },
+            { "data": "relprev_1" },
+            { "data": "http_relnext_1" },
+            { "data": "http_relprev_1" },
+            { "data": "size_bytes" },
+            { "data": "word_count" },
+            { "data": "text_ratio" },
+            { "data": "crawl_depth" },
+            { "data": "link_score" },
+            { "data": "inlinks" },
+            { "data": "unique_inlinks" },
+            { "data": "percentage_of_total" },
+            { "data": "outlinks" },
+            { "data": "unique_outlinks" },
+            { "data": "external_outlinks" },
+            { "data": "unique_external_outlinks" },
+            { "data": "hash" },
+            { "data": "response_time" },
+            { "data": "last_modified" },
+            { "data": "redirect_url" },
+            { "data": "redirect_type" },
+            { "data": "url_encoded_address" },
+          ]
+        });
+        return true;
+      }
       if(path[3] == 'ahrefs') {
         var table = $('#dataTable').DataTable({
           scrollY:'430px',
