@@ -36,9 +36,11 @@ class ScreaminFrogCrawlsImport implements ToCollection,WithHeadingRow
 
     public function getMetaData($row)
     {
+        $removeChar = ["https://", "http://", "www."];
         $data   = [
           'project_id'                     => $this->project->id,
           'address'                        => $row['address'] ?? null,
+          'path'                           => str_replace($removeChar, "", $row['address']) ?? null,
           'content'                        => $row['content'] ?? null,
           'status_code'                    => $row['status_code'] ?? null,
           'status'                         => $row['status']   ?? null,

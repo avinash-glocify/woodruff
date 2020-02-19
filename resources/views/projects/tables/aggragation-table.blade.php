@@ -90,32 +90,31 @@
       </tr>
     </thead>
     <tbody>
-      @php $removeChar = ["https://", "http://", "www."]; @endphp
       @foreach($analytics as $key => $sitemap)
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td style="max-width:450px; overflow:hidden; word-break: break-all;"><p> {{ $sitemap->address }}</p></td>
-        <td>test</td>
-        <td>{{ str_replace($removeChar, "", $sitemap->address) }}</td>
-        <td>test</td>
+        <td>{{ $sitemap->url_1 }}</td>
+        <td>{{ $sitemap->url_2 }}</td>
+        <td style="max-width: 100px; overflow:hidden; word-break: break-all;"><p style="word-break: break-all;"> {{ $sitemap->address }}</p></td>
+        <td>{{ $sitemap->final_url }}</td>
+        <td>{{ $sitemap->path }}</td>
+        <td>{{ $sitemap->category}}</td>
         <td>{{ $sitemap->crawl_depth}}</td>
         <td class="@if($sitemap->site_url) bg-light-green @else bg-pink @endif">{{ $sitemap->site_url ? 'Yes' : 'No'}}</td>
         <td>{{ $sitemap->keyword}}</td>
         <td>{{ $sitemap->search_volume}}</td>
         <td>{{ $sitemap->position}}</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
+        <td>{{ $sitemap->best_keyword}}</td>
+        <td>{{ $sitemap->best_valume}}</td>
+        <td>{{ $sitemap->best_position}}</td>
         <td>{{ $sitemap->impressions}}</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
+        <td>{{ $sitemap->session }}</td>
+        <td>{{ $sitemap->goal_completion }}</td>
+        <td>{{ $sitemap->conversion_rate }}</td>
+        <td>{{ $sitemap->goal_conversion_rate }}</td>
+        <td>{{ $sitemap->change_session }}</td>
+        <td>{{ $sitemap->bounce_rate }}</td>
+        <td>{{ $sitemap->avg_time_page }}</td>
+        <td>{{ $sitemap->losing_trafic }}</td>
         <td>{{ \App\Models\Ahref::where('link_url', $sitemap->address)->count() }}</td>
         <td>{{ $sitemap->ctr }}</td>
         <td>{{ $sitemap->content }}</td>

@@ -17,6 +17,7 @@ class CreateScreamingFrogsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('project_id');
             $table->string('address')->nullable();
+            $table->string('path')->nullable();
             $table->string('content')->nullable();
             $table->integer('status_code')->nullable();
             $table->string('status')->nullable();
