@@ -39,10 +39,11 @@ $(document).ready(function() {
           autoWidth: false,
           "ajax": url,
           "pageLength": 50,
+          "ordering": false,
           "columns": [
             { "data": "url_1" },
             { "data": "url_2" },
-            { "data": "address", width:'200px' },
+            { "data": "address"},
             { "data": "final_url" },
             { "data": "path" },
             { "data": "category" },
@@ -102,6 +103,7 @@ $(document).ready(function() {
           scrollY:        scrollY,
           scrollX:        scrollx,
           scrollCollapse: true,
+          autoWidth: false,
           "pageLength": 50,
           // fixedColumns:   {
           //       leftColumns: 3

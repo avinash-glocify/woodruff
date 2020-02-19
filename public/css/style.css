@@ -20981,7 +20981,7 @@ dl li {
       padding: 0.4rem 0.375rem;
 }
 .aggregation .dataTables_wrapper .dataTable thead th {
-      padding: 0.4rem 1.5rem;
+      padding: 0.4rem .5rem;
 }
 .DTFC_LeftBodyLiner {
   background-color: white;
