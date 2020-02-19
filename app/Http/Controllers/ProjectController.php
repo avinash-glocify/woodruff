@@ -158,9 +158,7 @@ class ProjectController extends Controller
     {
         $project      = Project::findOrFail($id);
         $analytics    = SemRush::where('project_id', $id)->get();
-        return response()->json([
-                  'html' => view('projects.tables.sem-rush-table', compact('analytics', 'project'))->render()
-          ]);
+        return response()->json(['data' => $analytics]);
     }
 
     public function semRush($id)

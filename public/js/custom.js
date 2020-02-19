@@ -179,6 +179,35 @@ $(document).ready(function() {
         });
         return true;
       }
+      if(path[3] == 'sem-rush') {
+        var table = $('#dataTable').DataTable({
+          scrollY:'430px',
+          scrollX: true,
+          scrollCollapse: true,
+          autoWidth: false,
+          "ajax": url,
+          "pageLength": 50,
+          "ordering": false,
+          "columns": [
+            { "data": "url" },
+            { "data": "keyword" },
+            { "data": "position"},
+            { "data": "previous_position" },
+            { "data": "search_volume" },
+            { "data": "keyword_difficulty" },
+            { "data": "cpc" },
+            { "data": "traffic" },
+            { "data": "traffic_percentage" },
+            { "data": "traffic_cost" },
+            { "data": "competition" },
+            { "data": "number_of_results" },
+            { "data": "trends" },
+            { "data": "timestamp" },
+            { "data": "serp_features_by_keyword" },
+          ]
+        });
+        return true;
+      }
       if(path[3] == 'google-search-console') {
         var table = $('#dataTable').DataTable({
           scrollY:'430px',
