@@ -14,14 +14,18 @@ $(document).ready(function() {
       const url = '/project/'+ path[2]+'/'+path[3]+'/data';
       const dataTable = '#dataTable';
       var scrollx = true;
+      var height  ="470px"
       if(path[3] == 'sitemap') {
         scrollx = false;
       }
-      setDataTable(url, dataTable, scrollx)
+      if(path[3] == 'aggregation') {
+        height = '430px';
+      }
+      setDataTable(url, dataTable, scrollx,height)
     }
   }
 
-  function setDataTable(url, dataTable, scrollx = true)
+  function setDataTable(url, dataTable, scrollx = true, scrollY)
   {
     $.ajax({
       url: url,
@@ -36,10 +40,10 @@ $(document).ready(function() {
       success: function(data) {
         $('#myTable').html(data.html);
         var table = $(dataTable).DataTable( {
-          scrollY:        "335px",
+          scrollY:        scrollY,
           scrollX:        scrollx,
           scrollCollapse: true,
-          "ordering": true,
+          "pageLength": 50,
           // fixedColumns:   {
           //       leftColumns: 3
           //   }

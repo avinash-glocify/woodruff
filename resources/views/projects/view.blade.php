@@ -3,7 +3,7 @@
 @php $segment = Request::segment(3); $user = Auth::user();  @endphp
 <div class="content-wrapper">
   <div class="row">
-    <div class="col-md-12 grid-margin stretch-card">
+    <div class="col-md-12 stretch-card">
       <div class="card">
         <div class="card-body dashboard-tabs p-0">
           <ul class="nav nav-tabs px-4" role="tablist">
@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-12 grid-margin">
+    <div class="col-md-12">
         <div class="tab-content py-0 px-0">
             <div class="">
               @if($segment == 'sitemap')

@@ -1,7 +1,6 @@
 <div class="row">
-  <div class="col-md-12 grid-margin stretch-card">
+  <div class="col-md-12 stretch-card import-tables">
     <div class="card">
-      <div class="card-header">SiteMaps</div>
       <div class="card-body">
           <div class="table-responsive" id="myTable">
         </div>

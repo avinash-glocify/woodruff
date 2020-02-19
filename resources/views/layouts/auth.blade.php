@@ -46,7 +46,6 @@
         @include('layouts.sidebar')
         <div class="main-panel">
           @yield('content')
-          @include('layouts.footer')
           @yield('extra_script')
         </div>
       </div>

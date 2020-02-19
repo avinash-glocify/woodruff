@@ -9978,12 +9978,15 @@ pre code {
   border-bottom: 2px solid #f3f3f3;
   min-width: 150px;
 }
-#dataTable_wrapper input {
+#myTable input {
   border-color: #282f3a !important;
+  height: 1.6rem;
+  padding: 0.5rem 0.81rem;
 }
-#dataTable_wrapper select {
-  padding: 0.5rem !important;
-  height: 2.2rem;
+#myTable select {
+  padding: 0.3rem !important;
+  height: 1.6rem;
+  font-size: 0.675rem;
 }
 
 .table tbody + tbody {
@@ -21037,34 +21040,33 @@ dl li {
   white-space: nowrap;
   font-weight: 400;
 }
-#dataTable_wrapper .row:last-child {
-      margin: 10px 0px;
-      padding: 16px 10px;
-}
-
-#dataTable_wrapper .row:last-child {
+#myTable .row:last-child {
       margin:0px;
       background: rgba(104, 104, 104, 0.2);
-      padding:6px 10px;
+      padding:0px 10px;
+}
+#myTable .row:last-child ul {
+  font-size: 0.675rem;
+}
+#myTable .row:last-child .dataTables_info {
+    padding-top: .4rem;
+    font-size: 0.675rem;
 }
 .aggregation #dataTable_wrapper .row:first-child {
   /* display: none; */
 }
-#aggregation label {
+#dataTable_wrapper label {
   margin-bottom: 0px;
 }
-#aggregation .content-wrapper {
+#myTable .content-wrapper {
   padding-bottom: 0px;
 }
 
-#aggregation footer {
-  display: none;
-}
 .dashboard-tabs .nav-tabs .nav-link {
-  padding: .5rem 1.5rem .5rem 1.5rem;
+  padding: .1rem 1.5rem .1rem 1.5rem;
 }
-.aggregation .card .card-body {
-    padding: 0.5rem 1.875rem;
+.import-tables .card .card-body {
+    padding: 0.2rem 1.875rem;
 }
 #dataTableAggregate_wrapper .row:last-child {
       margin: 10px 0px;
@@ -21198,7 +21200,7 @@ dl li {
 }
 
 .page-body-wrapper {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh);
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -21233,7 +21235,7 @@ dl li {
 
 .content-wrapper {
   /* background: #f3f3f3; */
-  padding: 1.1rem 1.04rem;
+  padding: 0px .4rem;
   width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
