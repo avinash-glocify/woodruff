@@ -9976,13 +9976,14 @@ pre code {
 .table thead th {
   vertical-align: bottom;
   border-bottom: 2px solid #f3f3f3;
-  min-width: 150px;
+  /* min-width: 150px; */
 }
 #myTable input {
   border-color: #282f3a !important;
   height: 1.6rem;
   padding: 0.5rem 0.81rem;
 }
+
 #myTable select {
   padding: 0.3rem !important;
   height: 1.6rem;
@@ -20980,7 +20981,7 @@ dl li {
       padding: 0.4rem 0.375rem;
 }
 .aggregation .dataTables_wrapper .dataTable thead th {
-      padding: 0.4rem 0.375rem;
+      padding: 0.4rem 1.5rem;
 }
 .DTFC_LeftBodyLiner {
   background-color: white;
@@ -21006,7 +21007,7 @@ dl li {
 .dataTables_wrapper .dataTable thead .sorting_asc_disabled:before,
 .dataTables_wrapper .dataTable thead .sorting_desc_disabled:before {
   content: "\F05D";
-  right: 0.8rem;
+  right: 0.2rem;
   bottom: 0.5rem;
 }
 .aggregation .dataTables_wrapper .dataTable thead .sorting:before,
@@ -21023,8 +21024,8 @@ dl li {
 .dataTables_wrapper .dataTable thead .sorting_asc_disabled:after,
 .dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
   content: "\F045";
-  right: 2em;
-  bottom: 0.5rem;
+  right: 0.7rem;
+  bottom: 0.7rem;
 }
 .aggregation .dataTables_wrapper .dataTable thead .sorting:after,
 .aggregation .dataTables_wrapper .dataTable thead .sorting_asc:after,
