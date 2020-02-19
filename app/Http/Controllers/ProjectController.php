@@ -146,9 +146,7 @@ class ProjectController extends Controller
     {
         $project      = Project::findOrFail($id);
         $analytics    = Ahref::where('project_id', $id)->get();
-        return response()->json([
-                  'html' => view('projects.tables.ahrefs-table', compact('analytics', 'project'))->render()
-          ]);
+        return response()->json(['data' => $analytics]);
     }
 
     public function screamingFrogData($id)

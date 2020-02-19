@@ -32,7 +32,7 @@ $(document).ready(function() {
         return true;
       }
       if(path[3] == 'aggregation') {
-        var table = $('#dataTable').DataTable( {
+        var table = $('#dataTable').DataTable({
           scrollY:'430px',
           scrollX: true,
           scrollCollapse: true,
@@ -77,6 +77,42 @@ $(document).ready(function() {
             { "data": "last_modified" },
             { "data": "inlinks" },
             { "data": "outlinks" },
+          ]
+        });
+        return true;
+      }
+      if(path[3] == 'ahrefs') {
+        var table = $('#dataTable').DataTable({
+          scrollY:'430px',
+          scrollX: true,
+          scrollCollapse: true,
+          autoWidth: false,
+          "ajax": url,
+          "pageLength": 50,
+          "ordering": false,
+          "columns": [
+            { "data": "ahref_number" },
+            { "data": "domain_rating" },
+            { "data": "url_rating_desc"},
+            { "data": "referring_domains" },
+            { "data": "referring_page_url" },
+            { "data": "referring_page_title" },
+            { "data": "internal_links_count" },
+            { "data": "external_links_count" },
+            { "data": "link_url" },
+            { "data": "textpre" },
+            { "data": "link_anchor" },
+            { "data": "textpost" },
+            { "data": "type" },
+            { "data": "backlink_status" },
+            { "data": "first_seen" },
+            { "data": "last_check" },
+            { "data": "day_lost" },
+            { "data": "language" },
+            { "data": "traffic" },
+            { "data": "keywords" },
+            { "data": "js_rendered" },
+            { "data": "linked_domains" },
           ]
         });
         return true;

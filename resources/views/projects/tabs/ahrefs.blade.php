@@ -3,6 +3,7 @@
     <div class="card">
       <div class="card-body">
           <div class="table-responsive" id="myTable">
+            @include('projects.tables.ahrefs-table')
         </div>
       </div>
     </div>

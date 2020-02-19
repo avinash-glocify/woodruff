@@ -26,31 +26,5 @@
       </tr>
     </thead>
     <tbody>
-      @foreach($analytics as $key => $analytic)
-      <tr>
-        <td>{{$analytic->ahref_number }}</td>
-        <td> {{$analytic->domain_rating }}</td>
-        <td> {{$analytic->url_rating_desc }}</td>
-        <td> {{$analytic->referring_domains }}</td>
-        <td> {{$analytic->referring_page_url }}</td>
-        <td>{{$analytic->referring_page_title }}</td>
-        <td> {{$analytic->internal_links_count }}</td>
-        <td> {{$analytic->external_links_count }}</td>
-        <td> {{$analytic->link_url }}</td>
-        <td> {{$analytic->textpre }}</td>
-        <td>{{$analytic->link_anchor }}</td>
-        <td> {{$analytic->textpost }}</td>
-        <td> {{$analytic->type}}</td>
-        <td> {{$analytic->backlink_status }}</td>
-        <td> {{$analytic->first_seen }}</td>
-        <td>{{$analytic->last_check }}</td>
-        <td> {{$analytic->day_lost }}</td>
-        <td> {{$analytic->language }}</td>
-        <td> {{$analytic->traffic }}</td>
-        <td> {{$analytic->keywords }}</td>
-        <td> {{$analytic->js_rendered }}</td>
-        <td> {{$analytic->linked_domains }}</td>
-      </tr>
-      @endforeach
     </tbody>
 </table>
