@@ -1,7 +1,6 @@
 <table class="table table-hover" id="dataTable">
     <thead class="btn-inverse-secondary">
       <tr class="bg-dark-green text-white">
-          <th>#</th>
           <th>Domain Rating</th>
           <th>Url Rating (DESC)</th>
           <th>Referring Domains</th>

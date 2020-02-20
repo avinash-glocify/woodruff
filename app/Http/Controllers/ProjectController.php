@@ -110,7 +110,10 @@ class ProjectController extends Controller
              'screaming_frogs.meta_description_1','screaming_frogs.content', 'screaming_frogs.status_code','screaming_frogs.indexability','screaming_frogs.last_modified',
              'screaming_frogs.inlinks', 'screaming_frogs.outlinks','screaming_frogs.crawl_depth', 'screaming_frogs.last_modified', 'screaming_frogs.h1_1',
             'sem_rushes.keyword','sem_rushes.search_volume','sem_rushes.position' ,'google_search_consoles.impressions','google_search_consoles.ctr',
-            'site_maps.url as site_url',\DB::raw('COUNT(DISTINCT  ahrefs.id) as link_count'),
+            \DB::raw('(CASE
+                      WHEN site_maps.url != "" THEN "Yes"
+                      ELSE "No"
+                      END) AS site_url'),\DB::raw('COUNT(DISTINCT  ahrefs.id) as link_count'),
             \DB::raw("'' as url_1, '' as url_2, 'test' as final_url, 'test' as category, 'test' as best_keyword, 'test' as best_valume,
             'test' as best_position, 'test' as session,'test' as goal_completion, 'test' as 'conversion_rate', 'test' as goal_conversion_rate,
             'test' as change_session, 'test' as bounce_rate, 'test' as avg_time_page, 'test' as losing_trafic"))

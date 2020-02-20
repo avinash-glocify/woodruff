@@ -33,7 +33,7 @@ $(document).ready(function() {
           { "data": "path" },
           { "data": "category" },
           { "data": "crawl_depth" },
-          { "data": "site_url" },
+          { "data": "site_url" , "sClass": "siteurl"},
           { "data": "keyword" },
           { "data": "search_volume" },
           { "data": "position" },
@@ -118,7 +118,6 @@ $(document).ready(function() {
       }
       if(path[3] == 'ahrefs') {
         columns = [
-          { "data": "ahref_number" },
           { "data": "domain_rating" },
           { "data": "url_rating_desc"},
           { "data": "referring_domains" },
@@ -184,7 +183,7 @@ $(document).ready(function() {
       ordering: ordering,
       "ajax": url,
       "pageLength": 50,
-      "columns": columns
+      "columns": columns,
     });
   }
 
