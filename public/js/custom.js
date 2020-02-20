@@ -23,7 +23,6 @@ $(document).ready(function() {
           autoWidth: false,
           "ajax": url,
           "pageLength": 50,
-          "sDom": "Rlfrtip",
           "columns": [
             { "data": "name"},
             { "data": "url" },
@@ -151,7 +150,6 @@ $(document).ready(function() {
           autoWidth: false,
           "ajax": url,
           "pageLength": 50,
-          "ordering": false,
           "columns": [
             { "data": "ahref_number" },
             { "data": "domain_rating" },
@@ -187,7 +185,6 @@ $(document).ready(function() {
           autoWidth: false,
           "ajax": url,
           "pageLength": 50,
-          "ordering": false,
           "columns": [
             { "data": "url" },
             { "data": "keyword" },
@@ -216,7 +213,6 @@ $(document).ready(function() {
           autoWidth: false,
           "ajax": url,
           "pageLength": 50,
-          "ordering": false,
           "columns": [
             { "data": "page" },
             { "data": "impressions" },
