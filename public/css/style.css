@@ -21024,8 +21024,8 @@ dl li {
 .dataTables_wrapper .dataTable thead .sorting_asc_disabled:after,
 .dataTables_wrapper .dataTable thead .sorting_desc_disabled:after {
   content: "\F045";
-  right: 0.7rem;
-  bottom: 0.7rem;
+  right: 0.8rem;
+  bottom: 0.5rem;
 }
 .aggregation .dataTables_wrapper .dataTable thead .sorting:after,
 .aggregation .dataTables_wrapper .dataTable thead .sorting_asc:after,
