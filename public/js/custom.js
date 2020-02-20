@@ -82,7 +82,7 @@ $(document).ready(function() {
       }
       if(path[3] == 'screaming-frogs') {
         var table = $('#dataTable').DataTable({
-          scrollY:'430px',
+          scrollY:  height,
           scrollX: true,
           scrollCollapse: true,
           autoWidth: false,
@@ -144,7 +144,7 @@ $(document).ready(function() {
       }
       if(path[3] == 'ahrefs') {
         var table = $('#dataTable').DataTable({
-          scrollY:'430px',
+          scrollY:height,
           scrollX: true,
           scrollCollapse: true,
           autoWidth: false,
@@ -179,7 +179,7 @@ $(document).ready(function() {
       }
       if(path[3] == 'sem-rush') {
         var table = $('#dataTable').DataTable({
-          scrollY:'430px',
+          scrollY:height,
           scrollX: true,
           scrollCollapse: true,
           autoWidth: false,
@@ -207,7 +207,7 @@ $(document).ready(function() {
       }
       if(path[3] == 'google-search-console') {
         var table = $('#dataTable').DataTable({
-          scrollY:'430px',
+          scrollY:height,
           scrollX: true,
           scrollCollapse: true,
           autoWidth: false,
